@@ -1,0 +1,22 @@
+module compare_tree (input wire [14+4-1:0] sad_min_pre,
+                     input wire [14+4-1:0] sad_0,
+                     input wire [14+4-1:0] sad_1,
+                     input wire [14+4-1:0] sad_2,
+                     input wire [14+4-1:0] sad_3,
+                     input wire [14+4-1:0] sad_4,
+                     input wire [14+4-1:0] sad_5,
+                     input wire [14+4-1:0] sad_6,
+                     input wire [14+4-1:0] sad_7,
+                     input wire [14+4-1:0] sad_8,
+                     input wire [14+4-1:0] sad_9,
+                     input wire [14+4-1:0] sad_10,
+                     input wire [14+4-1:0] sad_11,
+                     input wire [14+4-1:0] sad_12,
+                     input wire [14+4-1:0] sad_13,
+                     input wire [14+4-1:0] sad_14,
+                     input wire [14+4-1:0] sad_15,
+                     output wire [14-1:0] sad_min,
+                     output wire [4-1:0] motion_vec_x,
+                     output wire [4-1:0] motion_vec_y);
+    
+endmodule
