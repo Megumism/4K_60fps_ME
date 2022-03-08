@@ -36,7 +36,7 @@ module core (input wire clk,
              output reg [4-1:0] motion_vec_x_min,
              output reg [4-1:0] motion_vec_y_min);
     
-    reg [5-1:4] pro_cnt;
+    reg [5-1:0] pro_cnt;
     
     always @(posedge clk) begin
         if (rst) begin
