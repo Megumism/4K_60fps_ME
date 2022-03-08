@@ -49,6 +49,7 @@ module core_tb();
     wire [64-1:0] pre_frame_13;
     wire [64-1:0] pre_frame_14;
     wire [64-1:0] pre_frame_15;
+    wire sad_en;
     wire [14-1:0] sad_min;
     wire [4-1:0] motion_vec_x_min;
     wire [4-1:0] motion_vec_y_min;
@@ -107,6 +108,7 @@ module core_tb();
     .pre_frame_13(pre_frame_13),
     .pre_frame_14(pre_frame_14),
     .pre_frame_15(pre_frame_15),
+    .sad_en(sad_en),
     .sad_min(sad_min),
     .motion_vec_x_min(motion_vec_x_min),
     .motion_vec_y_min(motion_vec_y_min)
@@ -133,33 +135,33 @@ module core_tb();
     
     initial begin
         #200;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
+        #100 data_in = {8'b0,{176{1'b1}}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
         
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {{8{1'b1}},16'b0,{160{1'b1}}};
+        #100 data_in = {{64{1'b1}},8'b0,{112{1'b1}}};
         
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
         
-        #100 data_in = {8'b0,175'b1};
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
         
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
-        #100 data_in = 183'b1;
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {184{1'b1}};
+        #100 data_in = {{120{1'b1}},64'b0};
     end
     
     
