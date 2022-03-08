@@ -3,7 +3,7 @@ module sad (input wire clk,
             input wire crt_keep,
             input wire [64-1:0] pre_frame,
             input wire [64-1:0] crt_frame,
-            output wire [14-1:0] sad);
+            output wire [14-1:0] sad_data);
     
     wire [8-1:0] crt_pixel_o_00, pre_pixel_o_00, ad_00;
     pe pe_00(
@@ -153,7 +153,7 @@ module sad (input wire clk,
        ,.rst(rst)
        ,.crt_keep(crt_keep)
        ,.crt_pixel_i(crt_pixel_o_03)
-       ,.pre_pixel_i(crt_pixel_o_03)
+       ,.pre_pixel_i(pre_pixel_o_03)
        ,.crt_pixel_o(crt_pixel_o_13)
        ,.pre_pixel_o(pre_pixel_o_13)
        ,.ad(ad_13)
@@ -972,6 +972,6 @@ module sad (input wire clk,
     assign add_4_0 = add_3_0 + add_3_1;
     assign add_4_1 = add_3_2 + add_3_3;
 
-    assign sad = add_4_0 + add_4_1;
+    assign sad_data = add_4_0 + add_4_1;
 
 endmodule

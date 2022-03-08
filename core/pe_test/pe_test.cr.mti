@@ -1,1 +1,15 @@
+C:/Users/Tomorrow/Desktop/4K_60fps_ME/core/pe.v {1 {vlog -work work -vopt C:/Users/Tomorrow/Desktop/4K_60fps_ME/core/pe.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module pe
 
+Top level modules:
+	pe
+
+} {} {}} C:/Users/Tomorrow/Desktop/4K_60fps_ME/core/pe_tb.v {1 {vlog -work work -vopt C:/Users/Tomorrow/Desktop/4K_60fps_ME/core/pe_tb.v
+Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module pe_tb
+
+Top level modules:
+	pe_tb
+
+} {} {}}
