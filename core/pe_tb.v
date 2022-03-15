@@ -3,7 +3,7 @@
 module pe_tb();
     
     reg clk;
-    reg rst;
+    reg rst_n;
     reg crt_keep;
     
     initial begin
@@ -12,8 +12,8 @@ module pe_tb();
     end
     
     initial begin
-        rst         = 1'b1;
-        #300    rst = 1'b0;
+        rst_n         = 1'b0;
+        #300    rst_n = 1'b1;
         // #3000000 $display("---     result is %d         ---\n", verify);
         #10000   $stop;
     end
@@ -42,7 +42,7 @@ module pe_tb();
     end
 
     pe pe_for_test (.clk(clk)
-                   ,.rst(rst)
+                   ,.rst_n(rst_n)
                    ,.crt_keep(crt_keep)
                    ,.crt_pixel_i(crt_pixel_i)
                    ,.pre_pixel_i(pre_pixel_i)

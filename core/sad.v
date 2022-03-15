@@ -1,14 +1,14 @@
 module sad (input wire clk,
-            input wire rst,
+            input wire rst_n,
             input wire crt_keep,
             input wire [64-1:0] pre_frame,
             input wire [64-1:0] crt_frame,
-            output wire [14-1:0] sad_data);
+            output reg [14-1:0] sad_data);
     
     wire [8-1:0] crt_pixel_o_00, pre_pixel_o_00, ad_00;
     pe pe_00(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_frame[63:56])
        ,.pre_pixel_i(pre_frame[63:56])
@@ -20,7 +20,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_01, pre_pixel_o_01, ad_01;
     pe pe_01(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_frame[55:48])
        ,.pre_pixel_i(pre_frame[55:48])
@@ -33,7 +33,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_02, pre_pixel_o_02, ad_02;
     pe pe_02(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_frame[47:40])
        ,.pre_pixel_i(pre_frame[47:40])
@@ -46,7 +46,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_03, pre_pixel_o_03, ad_03;
     pe pe_03(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_frame[39:32])
        ,.pre_pixel_i(pre_frame[39:32])
@@ -59,7 +59,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_04, pre_pixel_o_04, ad_04;
     pe pe_04(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_frame[31:24])
        ,.pre_pixel_i(pre_frame[31:24])
@@ -72,7 +72,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_05, pre_pixel_o_05, ad_05;
     pe pe_05(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_frame[23:16])
        ,.pre_pixel_i(pre_frame[23:16])
@@ -85,7 +85,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_06, pre_pixel_o_06, ad_06;
     pe pe_06(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_frame[15:8])
        ,.pre_pixel_i(pre_frame[15:8])
@@ -98,7 +98,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_07, pre_pixel_o_07, ad_07;
     pe pe_07(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_frame[7:0])
        ,.pre_pixel_i(pre_frame[7:0])
@@ -111,7 +111,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_10, pre_pixel_o_10, ad_10;
     pe pe_10(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_00)
        ,.pre_pixel_i(pre_pixel_o_00)
@@ -124,7 +124,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_11, pre_pixel_o_11, ad_11;
     pe pe_11(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_01)
        ,.pre_pixel_i(pre_pixel_o_01)
@@ -137,7 +137,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_12, pre_pixel_o_12, ad_12;
     pe pe_12(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_02)
        ,.pre_pixel_i(pre_pixel_o_02)
@@ -150,7 +150,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_13, pre_pixel_o_13, ad_13;
     pe pe_13(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep)
        ,.crt_pixel_i(crt_pixel_o_03)
        ,.pre_pixel_i(pre_pixel_o_03)
@@ -163,7 +163,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_14, pre_pixel_o_14, ad_14;
     pe pe_14(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_04)
        ,.pre_pixel_i(pre_pixel_o_04)
@@ -176,7 +176,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_15, pre_pixel_o_15, ad_15;
     pe pe_15(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_05)
        ,.pre_pixel_i(pre_pixel_o_05)
@@ -189,7 +189,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_16, pre_pixel_o_16, ad_16;
     pe pe_16(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_06)
        ,.pre_pixel_i(pre_pixel_o_06)
@@ -202,7 +202,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_17, pre_pixel_o_17, ad_17;
     pe pe_17(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_07)
        ,.pre_pixel_i(pre_pixel_o_07)
@@ -215,7 +215,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_20, pre_pixel_o_20, ad_20;
     pe pe_20(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_10)
        ,.pre_pixel_i(pre_pixel_o_10)
@@ -228,7 +228,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_21, pre_pixel_o_21, ad_21;
     pe pe_21(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_11)
        ,.pre_pixel_i(pre_pixel_o_11)
@@ -241,7 +241,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_22, pre_pixel_o_22, ad_22;
     pe pe_22(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_12)
        ,.pre_pixel_i(pre_pixel_o_12)
@@ -254,7 +254,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_23, pre_pixel_o_23, ad_23;
     pe pe_23(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_13)
        ,.pre_pixel_i(pre_pixel_o_13)
@@ -267,7 +267,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_24, pre_pixel_o_24, ad_24;
     pe pe_24(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_14)
        ,.pre_pixel_i(pre_pixel_o_14)
@@ -280,7 +280,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_25, pre_pixel_o_25, ad_25;
     pe pe_25(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_15)
        ,.pre_pixel_i(pre_pixel_o_15)
@@ -293,7 +293,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_26, pre_pixel_o_26, ad_26;
     pe pe_26(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_16)
        ,.pre_pixel_i(pre_pixel_o_16)
@@ -306,7 +306,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_27, pre_pixel_o_27, ad_27;
     pe pe_27(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_17)
        ,.pre_pixel_i(pre_pixel_o_17)
@@ -319,7 +319,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_30, pre_pixel_o_30, ad_30;
     pe pe_30(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_20)
        ,.pre_pixel_i(pre_pixel_o_20)
@@ -332,7 +332,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_31, pre_pixel_o_31, ad_31;
     pe pe_31(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_21)
        ,.pre_pixel_i(pre_pixel_o_21)
@@ -345,7 +345,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_32, pre_pixel_o_32, ad_32;
     pe pe_32(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_22)
        ,.pre_pixel_i(pre_pixel_o_22)
@@ -358,7 +358,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_33, pre_pixel_o_33, ad_33;
     pe pe_33(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep)
        ,.crt_pixel_i(crt_pixel_o_23)
        ,.pre_pixel_i(pre_pixel_o_23)
@@ -371,7 +371,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_34, pre_pixel_o_34, ad_34;
     pe pe_34(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_24)
        ,.pre_pixel_i(pre_pixel_o_24)
@@ -384,7 +384,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_35, pre_pixel_o_35, ad_35;
     pe pe_35(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_25)
        ,.pre_pixel_i(pre_pixel_o_25)
@@ -397,7 +397,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_36, pre_pixel_o_36, ad_36;
     pe pe_36(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_26)
        ,.pre_pixel_i(pre_pixel_o_26)
@@ -410,7 +410,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_37, pre_pixel_o_37, ad_37;
     pe pe_37(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_27)
        ,.pre_pixel_i(pre_pixel_o_27)
@@ -423,7 +423,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_40, pre_pixel_o_40, ad_40;
     pe pe_40(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_30)
        ,.pre_pixel_i(pre_pixel_o_30)
@@ -436,7 +436,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_41, pre_pixel_o_41, ad_41;
     pe pe_41(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_31)
        ,.pre_pixel_i(pre_pixel_o_31)
@@ -449,7 +449,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_42, pre_pixel_o_42, ad_42;
     pe pe_42(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_32)
        ,.pre_pixel_i(pre_pixel_o_32)
@@ -462,7 +462,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_43, pre_pixel_o_43, ad_43;
     pe pe_43(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep)
        ,.crt_pixel_i(crt_pixel_o_33)
        ,.pre_pixel_i(pre_pixel_o_33)
@@ -475,7 +475,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_44, pre_pixel_o_44, ad_44;
     pe pe_44(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_34)
        ,.pre_pixel_i(pre_pixel_o_34)
@@ -488,7 +488,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_45, pre_pixel_o_45, ad_45;
     pe pe_45(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_35)
        ,.pre_pixel_i(pre_pixel_o_35)
@@ -501,7 +501,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_46, pre_pixel_o_46, ad_46;
     pe pe_46(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_36)
        ,.pre_pixel_i(pre_pixel_o_36)
@@ -514,7 +514,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_47, pre_pixel_o_47, ad_47;
     pe pe_47(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_37)
        ,.pre_pixel_i(pre_pixel_o_37)
@@ -527,7 +527,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_50, pre_pixel_o_50, ad_50;
     pe pe_50(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_40)
        ,.pre_pixel_i(pre_pixel_o_40)
@@ -540,7 +540,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_51, pre_pixel_o_51, ad_51;
     pe pe_51(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_41)
        ,.pre_pixel_i(pre_pixel_o_41)
@@ -553,7 +553,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_52, pre_pixel_o_52, ad_52;
     pe pe_52(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_42)
        ,.pre_pixel_i(pre_pixel_o_42)
@@ -566,7 +566,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_53, pre_pixel_o_53, ad_53;
     pe pe_53(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep)
        ,.crt_pixel_i(crt_pixel_o_43)
        ,.pre_pixel_i(pre_pixel_o_43)
@@ -579,7 +579,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_54, pre_pixel_o_54, ad_54;
     pe pe_54(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_44)
        ,.pre_pixel_i(pre_pixel_o_44)
@@ -592,7 +592,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_55, pre_pixel_o_55, ad_55;
     pe pe_55(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_45)
        ,.pre_pixel_i(pre_pixel_o_45)
@@ -605,7 +605,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_56, pre_pixel_o_56, ad_56;
     pe pe_56(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_46)
        ,.pre_pixel_i(pre_pixel_o_46)
@@ -618,7 +618,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_57, pre_pixel_o_57, ad_57;
     pe pe_57(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_47)
        ,.pre_pixel_i(pre_pixel_o_47)
@@ -631,7 +631,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_60, pre_pixel_o_60, ad_60;
     pe pe_60(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_50)
        ,.pre_pixel_i(pre_pixel_o_50)
@@ -644,7 +644,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_61, pre_pixel_o_61, ad_61;
     pe pe_61(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_51)
        ,.pre_pixel_i(pre_pixel_o_51)
@@ -657,7 +657,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_62, pre_pixel_o_62, ad_62;
     pe pe_62(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_52)
        ,.pre_pixel_i(pre_pixel_o_52)
@@ -670,7 +670,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_63, pre_pixel_o_63, ad_63;
     pe pe_63(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_53)
        ,.pre_pixel_i(pre_pixel_o_53)
@@ -683,7 +683,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_64, pre_pixel_o_64, ad_64;
     pe pe_64(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_54)
        ,.pre_pixel_i(pre_pixel_o_54)
@@ -696,7 +696,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_65, pre_pixel_o_65, ad_65;
     pe pe_65(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_55)
        ,.pre_pixel_i(pre_pixel_o_55)
@@ -709,7 +709,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_66, pre_pixel_o_66, ad_66;
     pe pe_66(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_56)
        ,.pre_pixel_i(pre_pixel_o_56)
@@ -722,7 +722,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_67, pre_pixel_o_67, ad_67;
     pe pe_67(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_57)
        ,.pre_pixel_i(pre_pixel_o_57)
@@ -735,7 +735,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_70, pre_pixel_o_70, ad_70;
     pe pe_70(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_60)
        ,.pre_pixel_i(pre_pixel_o_60)
@@ -748,7 +748,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_71, pre_pixel_o_71, ad_71;
     pe pe_71(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_61)
        ,.pre_pixel_i(pre_pixel_o_61)
@@ -761,7 +761,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_72, pre_pixel_o_72, ad_72;
     pe pe_72(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_62)
        ,.pre_pixel_i(pre_pixel_o_62)
@@ -774,7 +774,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_73, pre_pixel_o_73, ad_73;
     pe pe_73(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_63)
        ,.pre_pixel_i(pre_pixel_o_63)
@@ -787,7 +787,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_74, pre_pixel_o_74, ad_74;
     pe pe_74(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_64)
        ,.pre_pixel_i(pre_pixel_o_64)
@@ -800,7 +800,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_75, pre_pixel_o_75, ad_75;
     pe pe_75(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_65)
        ,.pre_pixel_i(pre_pixel_o_65)
@@ -813,7 +813,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_76, pre_pixel_o_76, ad_76;
     pe pe_76(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_66)
        ,.pre_pixel_i(pre_pixel_o_66)
@@ -826,7 +826,7 @@ module sad (input wire clk,
     wire [8-1:0] crt_pixel_o_77, pre_pixel_o_77, ad_77;
     pe pe_77(
         .clk(clk)
-       ,.rst(rst)
+       ,.rst_n(rst_n)
        ,.crt_keep(crt_keep) 
        ,.crt_pixel_i(crt_pixel_o_67)
        ,.pre_pixel_i(pre_pixel_o_67)
@@ -972,6 +972,13 @@ module sad (input wire clk,
     assign add_4_0 = add_3_0 + add_3_1;
     assign add_4_1 = add_3_2 + add_3_3;
 
-    assign sad_data = add_4_0 + add_4_1;
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            sad_data <= 0;
+        end
+        else begin
+            sad_data <= add_4_0 + add_4_1;
+        end
+    end
 
 endmodule

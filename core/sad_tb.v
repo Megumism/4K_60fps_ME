@@ -3,7 +3,7 @@
 module sad_tb();
     
     reg clk;
-    reg rst;
+    reg rst_n;
     reg crt_keep;
     
     initial begin
@@ -12,8 +12,8 @@ module sad_tb();
     end
     
     initial begin
-        rst         = 1'b1;
-        #300    rst = 1'b0;
+        rst_n         = 1'b0;
+        #300    rst_n = 1'b1;
         // #3000000 $display("---     result is %d         ---\n", verify);
         #10000   $stop;
     end
@@ -35,7 +35,7 @@ module sad_tb();
 
     
     sad sad_for_test (.clk(clk)
-                     ,.rst(rst)
+                     ,.rst_n(rst_n)
                      ,.crt_keep(crt_keep)
                      ,.pre_frame(pre_frame)
                      ,.crt_frame(crt_frame)

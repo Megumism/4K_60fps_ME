@@ -3,7 +3,7 @@
 module ct_tb();
     
     reg     clk;
-    reg     rst;
+    reg     rst_n;
     
     
     initial begin
@@ -12,8 +12,8 @@ module ct_tb();
     end
     
     initial begin
-        rst         = 1'b1;
-        #300    rst = 1'b0;
+        rst_n         = 1'b0;
+        #300    rst_n = 1'b1;
         // #3000000 $display("---     result is %d         ---\n", verify);
         #1000   $stop;
     end
