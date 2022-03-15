@@ -42,6 +42,7 @@ module core (input wire clk,
     // counter这边要注意如下风险：
     // 在没有加流水线的情况下，第0周期读入core，第8周期进比较树，第9周期能结果寄存器有值中间，第24周期有可以输出的终值。
     // 基于上述的逻辑，才有第8周期的crt_keep，才有第8周期到第23周期允许修改结果寄存器，才有y偏置量为8，才有第24周期的输出使能。
+    // 3.15: 在加法树到比较树之间增加了一级流水
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
@@ -59,7 +60,7 @@ module core (input wire clk,
     
     wire crt_keep;
     assign crt_keep = (pro_cnt >= 5'd8) ? 1'b1 : 1'b0;
-    assign sad_en = (pro_cnt == 5'd24);
+    assign sad_en = (pro_cnt == 5'd0);
     
     wire [14-1:0] sad_data_0;
     wire [14-1:0] sad_data_1;
@@ -106,10 +107,10 @@ module core (input wire clk,
             sad_min <= 14'b11_1111_1111_1111;
         end
         else begin
-            if (pro_cnt == 5'd0) begin
+            if (pro_cnt == 5'd8) begin
                 sad_min <= 14'b11_1111_1111_1111;
             end
-            else if (pro_cnt >= 5'd8 && pro_cnt< 5'd24) begin
+            else if (pro_cnt >= 5'd9 || pro_cnt == 5'd0) begin
                 sad_min <= (sad_cmp < sad_min) ? sad_cmp : sad_min;
             end
             else begin
@@ -123,11 +124,14 @@ module core (input wire clk,
             motion_vec_y_min <= 4'b0;
         end
         else begin
-            if (pro_cnt == 5'd0) begin
+            if (pro_cnt == 5'd8) begin
                 motion_vec_y_min <= 4'b0;
             end
-            else if (pro_cnt >= 5'd8 && pro_cnt < 5'd24) begin
-                motion_vec_y_min <= (sad_cmp < sad_min) ? (pro_cnt - 5'd8) : motion_vec_y_min;
+            // else if (pro_cnt == 5'd0) begin
+            //     motion_vec_y_min <= (sad_cmp < sad_min) ? (5'd15) : motion_vec_y_min;
+            // end
+            else if (pro_cnt >= 5'd9 || pro_cnt == 5'd0) begin
+                motion_vec_y_min <= (sad_cmp < sad_min) ? (pro_cnt - 5'd9) : motion_vec_y_min;
             end
             else begin
                 motion_vec_y_min <= motion_vec_y_min;
@@ -140,10 +144,10 @@ module core (input wire clk,
             motion_vec_x_min <= 4'b0;
         end
         else begin
-            if (pro_cnt == 5'd0) begin
+            if (pro_cnt == 5'd8) begin
                 motion_vec_x_min <= 4'b0;
             end
-            else if (pro_cnt >= 5'd8 && pro_cnt < 5'd24) begin
+            else if (pro_cnt >= 5'd9 || pro_cnt == 5'd0) begin
                 motion_vec_x_min <= (sad_cmp < sad_min) ? motion_vec_x_cmp : motion_vec_x_min;
             end
             else begin

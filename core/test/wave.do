@@ -1,7 +1,7 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /core_tb/core_test/clk
-add wave -noupdate /core_tb/core_test/rst
+add wave -noupdate /core_tb/core_test/rst_n
 add wave -noupdate /core_tb/core_test/crt_frame_0
 add wave -noupdate /core_tb/core_test/crt_frame_1
 add wave -noupdate /core_tb/core_test/crt_frame_2

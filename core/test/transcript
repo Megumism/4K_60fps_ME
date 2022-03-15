@@ -1,0 +1,156 @@
+# Reading C:/modeltech64_10.2c/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.2c Jul 19 2013 
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# OpenFile D:/4K_60fps_ME/core/test/ct_test.mpf 
+# Loading project ct_test
+# Compile of ct_tb.v was successful.
+# Compile of compare_tree.v was successful.
+# Compile of core.v was successful.
+# Compile of core_tb.v was successful.
+# Compile of pe.v was successful.
+# Compile of sad.v was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim -novopt work.core_tb
+# vsim -novopt work.core_tb 
+# Refreshing D:/4K_60fps_ME/core/test/work.core_tb
+# Loading work.core_tb
+# Refreshing D:/4K_60fps_ME/core/test/work.core
+# Loading work.core
+# Refreshing D:/4K_60fps_ME/core/test/work.sad
+# Loading work.sad
+# Refreshing D:/4K_60fps_ME/core/test/work.pe
+# Loading work.pe
+# Refreshing D:/4K_60fps_ME/core/test/work.compare_tree
+# Loading work.compare_tree
+run -all
+# Break in Module core_tb at D:/4K_60fps_ME/core/core_tb.v line 17
+add wave -position end sim:/core_tb/core_test/*
+restart -f
+run -all
+# Break in Module core_tb at D:/4K_60fps_ME/core/core_tb.v line 17
+do D:/4K_60fps_ME/core/test/wave.do
+# ** Error: (vish-4014) No objects found matching '/core_tb/core_test/rst'.
+# Executing ONERROR command at macro D:\4K_60fps_ME\core\test\wave.do line 4
+# Compile of ct_tb.v was successful.
+# Compile of compare_tree.v was successful.
+# Compile of core.v was successful.
+# Compile of core_tb.v was successful.
+# Compile of pe.v was successful.
+# Compile of sad.v was successful.
+# 6 compiles, 0 failed with no errors. 
+restart -f
+# Refreshing D:/4K_60fps_ME/core/test/work.core_tb
+# Loading work.core_tb
+# Refreshing D:/4K_60fps_ME/core/test/work.core
+# Loading work.core
+# Refreshing D:/4K_60fps_ME/core/test/work.sad
+# Loading work.sad
+# Refreshing D:/4K_60fps_ME/core/test/work.pe
+# Loading work.pe
+# Refreshing D:/4K_60fps_ME/core/test/work.compare_tree
+# Loading work.compare_tree
+run -all
+# Break in Module core_tb at D:/4K_60fps_ME/core/core_tb.v line 17
+quit -sim
+vsim -novopt work.core_tb
+# vsim -novopt work.core_tb 
+# Loading work.core_tb
+# Loading work.core
+# Loading work.sad
+# Loading work.pe
+# Loading work.compare_tree
+do D:/4K_60fps_ME/core/test/wave.do
+# ** Error: (vish-4014) No objects found matching '/core_tb/core_test/rst'.
+# Executing ONERROR command at macro D:\4K_60fps_ME\core\test\wave.do line 4
+add wave -position 1  sim:/core_tb/core_test/rst_n
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf D:/4K_60fps_ME/core/test/wave.do
+run -all
+# Break in Module core_tb at D:/4K_60fps_ME/core/core_tb.v line 17
+# Compile of ct_tb.v was successful.
+# Compile of compare_tree.v was successful.
+# Compile of core.v was successful.
+# Compile of core_tb.v was successful.
+# Compile of pe.v was successful.
+# Compile of sad.v was successful.
+# 6 compiles, 0 failed with no errors. 
+restart -f
+# Refreshing D:/4K_60fps_ME/core/test/work.core_tb
+# Loading work.core_tb
+# Refreshing D:/4K_60fps_ME/core/test/work.core
+# Loading work.core
+# Refreshing D:/4K_60fps_ME/core/test/work.sad
+# Loading work.sad
+# Refreshing D:/4K_60fps_ME/core/test/work.pe
+# Loading work.pe
+# Refreshing D:/4K_60fps_ME/core/test/work.compare_tree
+# Loading work.compare_tree
+run -all
+# Break in Module core_tb at D:/4K_60fps_ME/core/core_tb.v line 17
+# Compile of ct_tb.v was successful.
+# Compile of compare_tree.v was successful.
+# Compile of core.v was successful.
+# Compile of core_tb.v was successful.
+# Compile of pe.v was successful.
+# Compile of sad.v was successful.
+# 6 compiles, 0 failed with no errors. 
+restart -f
+# Refreshing D:/4K_60fps_ME/core/test/work.core_tb
+# Loading work.core_tb
+# Refreshing D:/4K_60fps_ME/core/test/work.core
+# Loading work.core
+# Refreshing D:/4K_60fps_ME/core/test/work.sad
+# Loading work.sad
+# Refreshing D:/4K_60fps_ME/core/test/work.pe
+# Loading work.pe
+# Refreshing D:/4K_60fps_ME/core/test/work.compare_tree
+# Loading work.compare_tree
+run -all
+# Break in Module core_tb at D:/4K_60fps_ME/core/core_tb.v line 17
+# Compile of ct_tb.v was successful.
+# Compile of compare_tree.v was successful.
+# Compile of core.v was successful.
+# Compile of core_tb.v was successful.
+# Compile of pe.v was successful.
+# Compile of sad.v was successful.
+# 6 compiles, 0 failed with no errors. 
+restart -f
+# Refreshing D:/4K_60fps_ME/core/test/work.core_tb
+# Loading work.core_tb
+# Refreshing D:/4K_60fps_ME/core/test/work.core
+# Loading work.core
+# Refreshing D:/4K_60fps_ME/core/test/work.sad
+# Loading work.sad
+# Refreshing D:/4K_60fps_ME/core/test/work.pe
+# Loading work.pe
+# Refreshing D:/4K_60fps_ME/core/test/work.compare_tree
+# Loading work.compare_tree
+run -all
+# Break in Module core_tb at D:/4K_60fps_ME/core/core_tb.v line 17
+# Compile of ct_tb.v was successful.
+# Compile of compare_tree.v was successful.
+# Compile of core.v was successful.
+# Compile of core_tb.v was successful.
+# Compile of pe.v was successful.
+# Compile of sad.v was successful.
+# 6 compiles, 0 failed with no errors. 
+# Load canceled
+restart -f
+# Refreshing D:/4K_60fps_ME/core/test/work.core_tb
+# Loading work.core_tb
+# Refreshing D:/4K_60fps_ME/core/test/work.core
+# Loading work.core
+# Refreshing D:/4K_60fps_ME/core/test/work.sad
+# Loading work.sad
+# Refreshing D:/4K_60fps_ME/core/test/work.pe
+# Loading work.pe
+# Refreshing D:/4K_60fps_ME/core/test/work.compare_tree
+# Loading work.compare_tree
+run -all
+# Break in Module core_tb at D:/4K_60fps_ME/core/core_tb.v line 17
