@@ -15,6 +15,7 @@ module pe (input wire clk,
 
         else begin
             if(crt_keep == 0) crt_pixel_cal <= crt_pixel_i;
+            else crt_pixel_cal <= crt_pixel_cal;
         end
     
     end
