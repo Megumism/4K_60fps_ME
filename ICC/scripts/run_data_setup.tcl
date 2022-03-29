@@ -1,18 +1,18 @@
 # Script step 1 - Data Setup and Basic Flow
 #
-exec rm -rf ../idct_chip.mw
+exec rm -rf ../me266_chip.mw
 #
 ############################################################
 # Create Milkyway Design Library
 ############################################################
 extend_mw_layers
-create_mw_lib ../idct_chip.mw -open -technology $tech_file -mw_reference_library  "$mw_path/hu55npkldut_m08f1f2_RDL $mw_path/HL55LPGP3VDS_SL_A01_P2_6M /home/student/Desktop/Workspace/55nm/mem/asdrlspkb1p64x16cm2sw0/hu55mem"
+create_mw_lib ../me266_chip.mw -open -technology $tech_file -mw_reference_library  "$mw_path/hu55npkldut_m08f1f2_RDL $mw_path/HL55LPGP3VDS_SL_A01_P2_6M /home/student/Desktop/Workspace/55nm/mem/asdrlspkb1p64x16cm2sw0/hu55mem"
 
 
 ############################################################
 # Load the netlist, constraints and controls.
 ############################################################
-import_designs $verilog_file -format verilog -top idct_chip
+import_designs $verilog_file -format verilog -top me266_chip
 
 ############################################################
 # Load TLU+ files

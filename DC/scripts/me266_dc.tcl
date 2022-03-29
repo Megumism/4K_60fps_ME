@@ -38,15 +38,10 @@ set_fix_multiple_port_nets -all -buffer_constants
 
 compile
 
-report_timing
-
 #Saving sdc
-write_sdc ../outputs/me266_test.sdc
+write_sdc ../outputs/me266_clk_with_driving.sdc
 
 check_design > ../reports/me266_check_design_report.rpt
-
-#Compile
-compile
 
 #Clean-up
 ###YBR ADD -blast_buses###
