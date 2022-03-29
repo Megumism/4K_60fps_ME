@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : me266_chip
 Version: O-2018.06-SP1
-Date   : Tue Mar 29 10:40:56 2022
+Date   : Tue Mar 29 19:07:21 2022
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -14,9 +14,9 @@ Date   : Tue Mar 29 10:40:56 2022
 Operating Conditions: TT1P0V25C   Library: hu55npkldut_tt1p0v25c
 Wire Load Model Mode: segmented
 
-  Startpoint: ME266/CORE/sad_8/sad_data_reg_1_
+  Startpoint: ME266/CORE/sad_8/sad_data_reg[1]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ME266/CORE/sad_min_reg_5_
+  Endpoint: ME266/CORE/sad_min_reg[5]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -1075,9 +1075,9 @@ Wire Load Model Mode: segmented
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             6.00       6.00
-  ME266/CORE/sad_8/sad_data_reg_1_/CK (SVL_FDPRBQ_F_1)
+  ME266/CORE/sad_8/sad_data_reg[1]/CK (SVL_FDPRBQ_F_1)
                                                           0.00 #     6.00 r
-  ME266/CORE/sad_8/sad_data_reg_1_/Q (SVL_FDPRBQ_F_1)     0.13       6.13 r
+  ME266/CORE/sad_8/sad_data_reg[1]/Q (SVL_FDPRBQ_F_1)     0.13       6.13 r
   ME266/CORE/sad_8/sad_data[1] (sad_7)                    0.00       6.13 r
   ME266/CORE/ct/sad_data_8[1] (compare_tree)              0.00       6.13 r
   ME266/CORE/ct/U148/X (SVL_INV_1)                        0.02       6.16 f
@@ -1165,13 +1165,13 @@ Wire Load Model Mode: segmented
   ME266/CORE/U44/X (SVL_OA2BB2_4)                         0.05      10.51 r
   ME266/CORE/U7/X (SVL_INV_4)                             0.03      10.54 f
   ME266/CORE/U103/X (SVL_AO221_1)                         0.17      10.71 f
-  ME266/CORE/sad_min_reg_5_/D (SVL_FDPSBQ_1)              0.00      10.71 f
+  ME266/CORE/sad_min_reg[5]/D (SVL_FDPSBQ_1)              0.00      10.71 f
   data arrival time                                                 10.71
 
   clock clk (rise edge)                                   5.00       5.00
   clock network delay (ideal)                             6.00      11.00
   clock uncertainty                                      -0.25      10.75
-  ME266/CORE/sad_min_reg_5_/CK (SVL_FDPSBQ_1)             0.00      10.75 r
+  ME266/CORE/sad_min_reg[5]/CK (SVL_FDPSBQ_1)             0.00      10.75 r
   library setup time                                     -0.04      10.71
   data required time                                                10.71
   --------------------------------------------------------------------------
