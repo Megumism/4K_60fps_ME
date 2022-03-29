@@ -1,0 +1,33 @@
+ 
+****************************************
+Report : area
+Design : me266_chip
+Version: O-2018.06-SP1
+Date   : Tue Mar 29 10:40:54 2022
+****************************************
+
+Library(s) Used:
+
+    hu55npkldut_tt1p0v25c (File: /home/student/Desktop/Workspace/55nm/hu55npkldut_tt1p0v25c.db)
+    sadslspkb2p24x64m4b1w0cp0d0t0_lib (File: /home/student/Desktop/Workspace/IDCT_55nm_mem/DC/lib/pre_sram.db)
+    sadslspkb2p16x64m4b1w0cp0d0t0_lib (File: /home/student/Desktop/Workspace/IDCT_55nm_mem/DC/lib/cur_sram.db)
+    HL55LPGP3VDS_SL_A01_TT1D8V1D2V25C (File: /home/student/Desktop/Workspace/55nm/HL55LPGP3VDS_SL_A01_P2_TT1D8V1D2V25C.db)
+
+Number of ports:                       111192
+Number of nets:                        228360
+Number of cells:                       103233
+Number of combinational cells:          81780
+Number of sequential cells:             17831
+Number of macros/black boxes:             107
+Number of buf/inv:                      32436
+Number of references:                       4
+
+Combinational area:             249158.553087
+Buf/Inv area:                    29602.159159
+Noncombinational area:          154184.798765
+Macro/Black Box area:           514867.009766
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                918210.361617
+Total area:                 undefined
+1
