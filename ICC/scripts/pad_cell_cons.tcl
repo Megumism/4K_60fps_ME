@@ -51,6 +51,7 @@ set_pad_physical_constraints   -pad_name "HPDWUW1416DGP_ref_in21" -side 1 -order
 set_pad_physical_constraints   -pad_name "HPDWUW1416DGP_ref_in22" -side 1 -order 27
 set_pad_physical_constraints   -pad_name "HPDWUW1416DGP_ref_in23" -side 1 -order 28
 set_pad_physical_constraints   -pad_name "HPDWUW1416DGP_x_out" -side 1 -order 29
+set_pad_physical_constraints   -pad_name "HPDWUW1416DGP_sign_sad" -side 1 -order 30
 
 # Top side
 set_pad_physical_constraints   -pad_name "HPDWUW1416DGP_ref_in24" -side 2 -order 1
