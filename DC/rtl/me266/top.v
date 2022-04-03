@@ -17,10 +17,10 @@ module me266(clk,rst,ref_in,cur_in,ref_read,cur_read,sad_out,x_out,y_out,sign_sa
   wire x_out;
   wire y_out;
   wire [63:0] ref_in;
-  reg ref_en;
+
   reg [2:0] ref_flag;
   wire ref_read,ref_out;
-  wire [63:0] pre_frame_0,pre_frame_1,pre_frame_2,pre_frame_3,pre_frame_4,pre_frame_5,pre_frame_6,pre_frame_7,pre_frame_8,pre_frame_9,pre_frame_10,pre_frame_11,pre_frame_12,pre_frame_13,pre_frame_14,pre_frame_15;
+  wire [183:0] data_out;
 
   reg core_reset;
   wire [14-1:0] sad_min;
@@ -54,22 +54,7 @@ pre_frame_buffer PRE (.clk(clk),
                       .out_en(ref_out),
                       .cur_out(cur_out),
                       .data_in(ref_in),
-                      .pre_frame_0(pre_frame_0),
-                      .pre_frame_1(pre_frame_1),
-                      .pre_frame_2(pre_frame_2),
-                      .pre_frame_3(pre_frame_3),
-                      .pre_frame_4(pre_frame_4),
-                      .pre_frame_5(pre_frame_5),
-                      .pre_frame_6(pre_frame_6),
-                      .pre_frame_7(pre_frame_7),
-                      .pre_frame_8(pre_frame_8),
-                      .pre_frame_9(pre_frame_9),
-                      .pre_frame_10(pre_frame_10),
-                      .pre_frame_11(pre_frame_11),
-                      .pre_frame_12(pre_frame_12),
-                      .pre_frame_13(pre_frame_13),
-                      .pre_frame_14(pre_frame_14),
-                      .pre_frame_15(pre_frame_15),
+                      .data_out(data_out),
                       .frame_end(frame_end));
 
 
@@ -104,22 +89,22 @@ end
     .crt_frame_13(crt_frame),
     .crt_frame_14(crt_frame),
     .crt_frame_15(crt_frame),
-    .pre_frame_0(pre_frame_0),
-    .pre_frame_1(pre_frame_1),
-    .pre_frame_2(pre_frame_2),
-    .pre_frame_3(pre_frame_3),
-    .pre_frame_4(pre_frame_4),
-    .pre_frame_5(pre_frame_5),
-    .pre_frame_6(pre_frame_6),
-    .pre_frame_7(pre_frame_7),
-    .pre_frame_8(pre_frame_8),
-    .pre_frame_9(pre_frame_9),
-    .pre_frame_10(pre_frame_10),
-    .pre_frame_11(pre_frame_11),
-    .pre_frame_12(pre_frame_12),
-    .pre_frame_13(pre_frame_13),
-    .pre_frame_14(pre_frame_14),
-    .pre_frame_15(pre_frame_15),
+    .pre_frame_0(data_out[183:120]),
+    .pre_frame_1(data_out[175:112]),
+    .pre_frame_2(data_out[167:104]),
+    .pre_frame_3(data_out[159:96]),
+    .pre_frame_4(data_out[151:88]),
+    .pre_frame_5(data_out[143:80]),
+    .pre_frame_6(data_out[135:72]),
+    .pre_frame_7(data_out[127:64]),
+    .pre_frame_8(data_out[119:56]),
+    .pre_frame_9(data_out[111:48]),
+    .pre_frame_10(data_out[103:40]),
+    .pre_frame_11(data_out[95:32]),
+    .pre_frame_12(data_out[87:24]),
+    .pre_frame_13(data_out[79:16]),
+    .pre_frame_14(data_out[71:8]),
+    .pre_frame_15(data_out[63:0]),
     .sad_min(sad_min),
     .sad_en(sad_en),
     .motion_vec_x_min(motion_vec_x_min),

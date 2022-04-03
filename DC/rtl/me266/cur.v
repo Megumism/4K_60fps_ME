@@ -9,14 +9,14 @@ output [63:0]out;
 
 wire [63:0]reg_ra,reg_rb,reg_wa,reg_wb;
 reg [3:0]addr_a,addr_b;
-reg wea,web,mea,meb,testa,testb,rmea,rmeb;
-reg [3:0]rma,rmb;
-reg sign,pos,en_in,cur_start;
+wire web,mea,meb,testa,testb,rmea,rmeb;
+wire[3:0]rma,rmb;
+reg wea,sign,pos,en_in,cur_start;
 reg [63:0]buffer;
 reg [4:0] cur_count;
 reg [16:0]start;
 reg [4:0]out_conti_count;
-wire en_out_zero,cur_count_24,cur_count_0_15,cur_count_1_16,cur_count_2_18,cur_count_1_18,curstart_pos_zero,cur_count_3_20,cur_count_4_23,out_conti_count_smaller_8;
+wire en_out_zero,cur_count_24,cur_count_0_15,cur_count_1_16,cur_count_2_18,cur_count_1_18,curstart_pos_zero,cur_count_3_20,cur_count_4_23,out_conti_count_smaller_24,out_conti_count_smaller_8;
 
 ////////////////////SRAM//////////////////////////
 sadslspkb2p16x64m4b1w0cp0d0t0 dua(  .QA(reg_ra), 
@@ -45,30 +45,15 @@ assign out = reg_rb;
 assign reg_wa = buffer;
 
 //////////////////UNCHANGED SIGNAL///////////////////
-always@(posedge clk or negedge rst_n) begin
-    if(!rst_n)begin
-        rmea <= 0;
-        rmeb <= 0;
-        mea <= 1;
-        meb <= 1;
-        testa <= 0;
-        testb <= 0;
-        web <= 0;
-        rma <= 0;
-        rmb <= 0;
-    end 
-    else begin
-        rmea <= rmea;
-        rmeb <= rmeb;
-        mea <= mea;
-        meb <= meb;
-        testa <= testa;
-        testb <= testb;
-        web <= web;
-        rma <= rma;
-        rmb <= rmb;
-    end   
-end
+assign rmea = 0;
+assign rmeb = 0;
+assign mea = 1;
+assign meb = 1;
+assign testa = 0;
+assign testb = 0;
+assign web = 0;
+assign rmb = 0;
+assign rma = 0;
 
 ////////////////JUDGMENT CRITERIA/////////////////
 assign en_out_zero = (!en_out) && (!cur_start);
