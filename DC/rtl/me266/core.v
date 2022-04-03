@@ -60,7 +60,7 @@ module core (input wire clk,
     
     wire crt_keep;
     assign crt_keep = (pro_cnt >= 5'd8) ? 1'b1 : 1'b0;
-    assign sad_en = (pro_cnt == 5'd0);
+    assign sad_en = (pro_cnt == 5'd23);
     
     wire [14-1:0] sad_data_0;
     wire [14-1:0] sad_data_1;

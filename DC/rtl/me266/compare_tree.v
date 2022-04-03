@@ -1,4 +1,3 @@
-
 module compare_tree (input wire [14-1:0] sad_data_0,
                      input wire [14-1:0] sad_data_1,
                      input wire [14-1:0] sad_data_2,

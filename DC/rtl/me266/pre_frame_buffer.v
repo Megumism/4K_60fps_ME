@@ -1,55 +1,25 @@
 //previous frame buffer
 //version 1
 
-module pre_frame_buffer(clk, rst_n, in_en, out_en, cur_out, data_in, pre_frame_0,pre_frame_1,pre_frame_2,pre_frame_3,pre_frame_4,pre_frame_5,pre_frame_6,pre_frame_7,pre_frame_8,pre_frame_9,pre_frame_10,pre_frame_11,pre_frame_12,pre_frame_13,pre_frame_14,pre_frame_15,frame_end);
+
+module pre_frame_buffer(clk, rst_n, in_en, out_en, cur_out, data_in,data_out , frame_end);
 //defination of inputs and outputs
  
-  input clk;                 //module enable
-  input rst_n;
-  input [63:0]data_in;
-  output out_en;
-  output in_en;
-  output pre_frame_0;
-  output pre_frame_1;
-  output pre_frame_2;
-  output pre_frame_3;
-  output pre_frame_4;
-  output pre_frame_5;
-  output pre_frame_6;
-  output pre_frame_7;
-  output pre_frame_8;
-  output pre_frame_9;
-  output pre_frame_10;
-  output pre_frame_11;
-  output pre_frame_12;
-  output pre_frame_13;
-  output pre_frame_14;
-  output pre_frame_15;
-  output frame_end;
-  output cur_out;
+  input wire clk;                 //module enable
+  input wire rst_n;
+  input wire [63:0] data_in;
+  output reg out_en;
+  output reg in_en;
+  output reg [183:0] data_out;
+  output reg frame_end;
+  output reg cur_out;
   
-  wire clk;
-  wire [63:0]data_in;
-  reg in_en;
-  reg out_en;
-  reg frame_end;
-  reg cur_out;
-  reg [63:0]pre_frame_0;
-  reg [63:0]pre_frame_1;
-  reg [63:0]pre_frame_2;
-  reg [63:0]pre_frame_3;
-  reg [63:0]pre_frame_4;
-  reg [63:0]pre_frame_5;
-  reg [63:0]pre_frame_6;
-  reg [63:0]pre_frame_7;
-  reg [63:0]pre_frame_8;
-  reg [63:0]pre_frame_9;
-  reg [63:0]pre_frame_10;
-  reg [63:0]pre_frame_11;
-  reg [63:0]pre_frame_12;
-  reg [63:0]pre_frame_13;
-  reg [63:0]pre_frame_14;
-  reg [63:0]pre_frame_15;
+
+
+
+
+
+
 
 //defination of register
  
@@ -370,7 +340,7 @@ module pre_frame_buffer(clk, rst_n, in_en, out_en, cur_out, data_in, pre_frame_0
       begin 
         if(statu == 0 && clk_count == 73)
           x_cycle_count <= x_cycle_count+1;
-        else if(statu == 1 && clk_count == 25)
+        else if(statu == 1 && clk_count == 25 && x_cycle_count != 480)
           x_cycle_count <= x_cycle_count+1;
         else if(statu == 1 && clk_count == 25 && x_cycle_count == 480)
           x_cycle_count <=1;
@@ -420,164 +390,19 @@ module pre_frame_buffer(clk, rst_n, in_en, out_en, cur_out, data_in, pre_frame_0
       end
   end
   
-  always@(posedge clk or negedge rst_n)      //pre_frame_0
+  always@(posedge clk or negedge rst_n)      //data_out
   begin
-    if(zero_sram == 3'b100)
-      pre_frame_0 <=  {tmp_out2[55:0],tmp_out1[63:56]};
-    else if(zero_sram == 3'b010)
-      pre_frame_0 <=  {tmp_out1[55:0],tmp_out0[63:56]};
+    if(~rst_n)
+      data_out<=184'b0;
     else
-      pre_frame_0 <=  {tmp_out0[55:0],tmp_out2[63:56]};
+      begin
+        if(zero_sram==3'b100)
+          data_out<={tmp_out2[55:0],tmp_out1[63:0],tmp_out0[63:0]};
+        else if(zero_sram==3'b010)
+          data_out<={tmp_out1[55:0],tmp_out0[63:0],tmp_out2[63:0]};
+        else
+          data_out<={tmp_out0[55:0],tmp_out2[63:0],tmp_out1[63:0]};
+      end
   end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_1
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_1 <=  {tmp_out2[47:0],tmp_out1[63:48]};
-    else if(zero_sram == 3'b010)
-      pre_frame_1 <=  {tmp_out1[47:0],tmp_out0[63:48]};
-    else
-      pre_frame_1 <=  {tmp_out0[47:0],tmp_out2[63:48]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_2
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_2 <=  {tmp_out2[39:0],tmp_out1[63:40]};
-    else if(zero_sram == 3'b010)
-      pre_frame_2 <=  {tmp_out1[39:0],tmp_out0[63:40]};
-    else
-      pre_frame_2 <=  {tmp_out0[39:0],tmp_out2[63:40]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_3
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_3 <=  {tmp_out2[31:0],tmp_out1[63:32]};
-    else if(zero_sram == 3'b010)
-      pre_frame_3 <=  {tmp_out1[31:0],tmp_out0[63:32]};
-    else
-      pre_frame_3 <=  {tmp_out0[31:0],tmp_out2[63:32]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_4
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_4 <=  {tmp_out2[23:0],tmp_out1[63:24]};
-    else if(zero_sram == 3'b010)
-      pre_frame_4 <=  {tmp_out1[23:0],tmp_out0[63:24]};
-    else
-      pre_frame_4 <=  {tmp_out0[23:0],tmp_out2[63:24]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_5
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_5 <=  {tmp_out2[15:0],tmp_out1[63:16]};
-    else if(zero_sram == 3'b010)
-      pre_frame_5 <=  {tmp_out1[15:0],tmp_out0[63:16]};
-    else
-      pre_frame_5 <=  {tmp_out0[15:0],tmp_out2[63:16]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_6
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_6 <=  {tmp_out2[7:0],tmp_out1[63:8]};
-    else if(zero_sram == 3'b010)
-      pre_frame_6 <=  {tmp_out1[7:0],tmp_out0[63:8]};
-    else
-      pre_frame_6 <=  {tmp_out0[7:0],tmp_out2[63:8]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_7
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_7 <=  tmp_out1[63:0];
-    else if(zero_sram == 3'b010)
-      pre_frame_7 <=  tmp_out0[63:0];
-    else
-      pre_frame_7 <=  tmp_out2[63:0];
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_8
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_8 <=  {tmp_out1[55:0],tmp_out0[63:56]};
-    else if(zero_sram == 3'b010)
-      pre_frame_8 <=  {tmp_out0[55:0],tmp_out2[63:56]};
-    else
-      pre_frame_8 <=  {tmp_out2[55:0],tmp_out1[63:56]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_9
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_9 <=  {tmp_out1[47:0],tmp_out0[63:48]};
-    else if(zero_sram == 3'b010)
-      pre_frame_9 <=  {tmp_out0[47:0],tmp_out2[63:48]};
-    else
-      pre_frame_9 <=  {tmp_out2[47:0],tmp_out1[63:48]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_10
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_10 <=  {tmp_out1[39:0],tmp_out0[63:40]};
-    else if(zero_sram == 3'b010)
-      pre_frame_10 <=  {tmp_out0[39:0],tmp_out2[63:40]};
-    else
-      pre_frame_10 <=  {tmp_out2[39:0],tmp_out1[63:40]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_11
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_11 <=  {tmp_out1[31:0],tmp_out0[63:32]};
-    else if(zero_sram == 3'b010)
-      pre_frame_11 <=  {tmp_out0[31:0],tmp_out2[63:32]};
-    else
-      pre_frame_11 <=  {tmp_out2[31:0],tmp_out1[63:32]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_12
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_12 <=  {tmp_out1[23:0],tmp_out0[63:24]};
-    else if(zero_sram == 3'b010)
-      pre_frame_12 <=  {tmp_out0[23:0],tmp_out2[63:24]};
-    else
-      pre_frame_12 <=  {tmp_out2[23:0],tmp_out1[63:24]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_13
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_13 <=  {tmp_out1[15:0],tmp_out0[63:16]};
-    else if(zero_sram == 3'b010)
-      pre_frame_13 <=  {tmp_out0[15:0],tmp_out2[63:16]};
-    else
-      pre_frame_13 <=  {tmp_out2[15:0],tmp_out1[63:16]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_14
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_14 <=  {tmp_out1[7:0],tmp_out0[63:8]};
-    else if(zero_sram == 3'b010)
-      pre_frame_14 <=  {tmp_out0[7:0],tmp_out2[63:8]};
-    else
-      pre_frame_14 <=  {tmp_out2[7:0],tmp_out1[63:8]};
-  end
-  
-  always@(posedge clk or negedge rst_n)      //pre_frame_15
-  begin
-    if(zero_sram == 3'b100)
-      pre_frame_15 <=  tmp_out0[63:0];
-    else if(zero_sram == 3'b010)
-      pre_frame_15 <=  tmp_out2[63:0];
-    else
-      pre_frame_15 <=  tmp_out1[63:0];
-  end  
   
 endmodule
