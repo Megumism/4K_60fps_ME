@@ -1,0 +1,4 @@
+<!DOCTYPE Status>
+<Status>
+ <Target status="OK" logfile="/home/synopsystools/Embedit_Projects/test_lin/compout/views/asdrlspkb1p64x16cm2sw0/asdrlspkb1p64x16cm2sw0.log" errors="0" name="GENERATE" warnings="0"/>
+</Status>

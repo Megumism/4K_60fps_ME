@@ -1,0 +1,201 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : me266_chip
+Version: O-2018.06-SP1
+Date   : Fri Apr  8 15:29:17 2022
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: TT1P0V25C   Library: hu55npkldut_tt1p0v25c
+
+Information: Percent of Arnoldi-based delays =  6.62%
+
+Information: Percent of CCS-based delays =  6.46%
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: ME266/PRE/data_out_reg_101_
+            (rising-edge recovery check against clock clk)
+  Path Group: INPUTS
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             5.58       5.58
+  input external delay                                    2.50       8.08 r
+  rst (in)                                                0.05       8.13 r
+  HPDWUW1416DGP_rst/PAD (HPDWUW1416DGP)                   0.00       8.13 r
+  HPDWUW1416DGP_rst/C (HPDWUW1416DGP)                     0.61 @     8.74 r
+  ME266/rst (me266)                                       0.00       8.74 r
+  ME266/U1/X (SVL_BUF_12)                                 0.14 c     8.88 r
+  ME266/PRE/IN2 (pre_frame_buffer)                        0.00       8.88 r
+  ME266/PRE/U12/X (SVL_BUF_S_1)                           0.73 c     9.61 r
+  ME266/PRE/data_out_reg_101_/RD (SVL_FDPRBQ_1)           0.01 &     9.62 r
+  data arrival time                                                  9.62
+
+  clock clk (rise edge)                                   5.08       5.08
+  clock network delay (propagated)                        5.29      10.37
+  clock reconvergence pessimism                           0.00      10.37
+  clock uncertainty                                      -0.10      10.27
+  ME266/PRE/data_out_reg_101_/CK (SVL_FDPRBQ_1)           0.00      10.27 r
+  library recovery time                                  -0.37       9.89
+  data required time                                                 9.89
+  --------------------------------------------------------------------------
+  data required time                                                 9.89
+  data arrival time                                                 -9.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.27
+
+
+  Startpoint: ME266/RESULT/y_reg_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_out (output port clocked by clk)
+  Path Group: OUTPUTS
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        5.59       5.59
+  ME266/RESULT/y_reg_reg/CK (SVL_FDPHRBQ_1)               0.00       5.59 r
+  ME266/RESULT/y_reg_reg/Q (SVL_FDPHRBQ_1)                0.19       5.77 r
+  ME266/RESULT/y_out (result)                             0.00       5.77 r
+  ME266/y_out (me266)                                     0.00       5.77 r
+  U119/X (SVL_BUF_12)                                     0.05 &     5.83 r
+  U1/X (SVL_BUF_24)                                       0.05 c     5.87 r
+  HPDWUW1416DGP_y_out/PAD (HPDWUW1416DGP)                 1.88 c     7.76 r
+  y_out (out)                                             0.00       7.76 r
+  data arrival time                                                  7.76
+
+  clock clk (rise edge)                                   5.08       5.08
+  clock network delay (ideal)                             5.58      10.66
+  clock reconvergence pessimism                           0.00      10.66
+  clock uncertainty                                      -0.10      10.56
+  output external delay                                  -2.50       8.06
+  data required time                                                 8.06
+  --------------------------------------------------------------------------
+  data required time                                                 8.06
+  data arrival time                                                 -7.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: ME266/CORE/sad_8/pe_53/crt_pixel_cal_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ME266/CORE/sad_8/sad_data_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        5.57       5.57
+  ME266/CORE/sad_8/pe_53/crt_pixel_cal_reg_0_/CK (SVL_FDPHRBQ_1)
+                                                          0.00       5.57 r
+  ME266/CORE/sad_8/pe_53/crt_pixel_cal_reg_0_/Q (SVL_FDPHRBQ_1)
+                                                          0.22       5.79 f
+  ME266/CORE/sad_8/pe_53/U25/X (SVL_NR2B_0P5)             0.10 &     5.89 f
+  ME266/CORE/sad_8/pe_53/U26/X (SVL_AN2_0P5)              0.09 &     5.98 f
+  ME266/CORE/sad_8/pe_53/U27/X (SVL_OAI222_1)             0.09 &     6.07 r
+  ME266/CORE/sad_8/pe_53/U18/X (SVL_INV_1)                0.04 &     6.10 f
+  ME266/CORE/sad_8/pe_53/U28/X (SVL_AO221_1)              0.14 &     6.24 f
+  ME266/CORE/sad_8/pe_53/U29/X (SVL_OA221_1)              0.09 &     6.33 f
+  ME266/CORE/sad_8/pe_53/U30/X (SVL_AO221_1)              0.14 &     6.47 f
+  ME266/CORE/sad_8/pe_53/U31/X (SVL_OAI221_1)             0.05 &     6.52 r
+  ME266/CORE/sad_8/pe_53/U32/X (SVL_AO21B_1)              0.05 &     6.57 f
+  ME266/CORE/sad_8/pe_53/U33/X (SVL_AO21B_1)              0.05 &     6.62 r
+  ME266/CORE/sad_8/pe_53/U13/X (SVL_OAI21_2)              0.08 &     6.69 f
+  ME266/CORE/sad_8/pe_53/U1/X (SVL_INV_0P5)               0.19 &     6.88 r
+  ME266/CORE/sad_8/pe_53/U16/X (SVL_AO22_1)               0.19 &     7.07 r
+  ME266/CORE/sad_8/pe_53/ad[0] (pe_468)                   0.00       7.07 r
+  ME266/CORE/sad_8/add_52_root_add_0_root_add_980/B_0_ (sad_7_DW01_add_27)
+                                                          0.00       7.07 r
+  ME266/CORE/sad_8/add_52_root_add_0_root_add_980/U1/X (SVL_AN2_0P5)
+                                                          0.11 &     7.19 r
+  ME266/CORE/sad_8/add_52_root_add_0_root_add_980/U1_1/S (SVL_ADDF_1)
+                                                          0.19 &     7.38 f
+  ME266/CORE/sad_8/add_52_root_add_0_root_add_980/SUM_1_ (sad_7_DW01_add_27)
+                                                          0.00       7.38 f
+  ME266/CORE/sad_8/add_24_root_add_0_root_add_980/B_1_ (sad_7_DW01_add_26)
+                                                          0.00       7.38 f
+  ME266/CORE/sad_8/add_24_root_add_0_root_add_980/U1_1/S (SVL_ADDF_4)
+                                                          0.27 &     7.65 r
+  ME266/CORE/sad_8/add_24_root_add_0_root_add_980/SUM_1_ (sad_7_DW01_add_26)
+                                                          0.00       7.65 r
+  ME266/CORE/sad_8/add_21_root_add_0_root_add_980/B_1_ (sad_7_DW01_add_25)
+                                                          0.00       7.65 r
+  ME266/CORE/sad_8/add_21_root_add_0_root_add_980/U1_1/S (SVL_ADDF_1)
+                                                          0.18 &     7.83 f
+  ME266/CORE/sad_8/add_21_root_add_0_root_add_980/SUM_1_ (sad_7_DW01_add_25)
+                                                          0.00       7.83 f
+  ME266/CORE/sad_8/add_15_root_add_0_root_add_980/A_1_ (sad_7_DW01_add_17)
+                                                          0.00       7.83 f
+  ME266/CORE/sad_8/add_15_root_add_0_root_add_980/U1_1/S (SVL_ADDF_1)
+                                                          0.23 &     8.06 r
+  ME266/CORE/sad_8/add_15_root_add_0_root_add_980/SUM_1_ (sad_7_DW01_add_17)
+                                                          0.00       8.06 r
+  ME266/CORE/sad_8/U135/S (SVL_ADDF_1)                    0.19 &     8.25 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/B_1_ (sad_7_DW01_add_1)
+                                                          0.00       8.25 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/U1_1/CO (SVL_ADDF_1)
+                                                          0.16 &     8.41 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/U1_2/CO (SVL_ADDF_1)
+                                                          0.14 &     8.55 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/U1_3/CO (SVL_ADDF_1)
+                                                          0.14 &     8.68 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/U1_4/CO (SVL_ADDF_1)
+                                                          0.14 &     8.82 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/U1_5/CO (SVL_ADDF_1)
+                                                          0.14 &     8.97 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/U1_6/CO (SVL_ADDF_1)
+                                                          0.14 &     9.11 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/U1_7/CO (SVL_ADDF_1)
+                                                          0.14 &     9.25 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/U1_8/CO (SVL_ADDF_1)
+                                                          0.14 &     9.39 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/U1_9/S (SVL_ADDF_1)
+                                                          0.17 &     9.56 f
+  ME266/CORE/sad_8/add_1_root_add_0_root_add_980/SUM[9] (sad_7_DW01_add_1)
+                                                          0.00       9.56 f
+  ME266/CORE/sad_8/add_0_root_add_0_root_add_980/B[9] (sad_7_DW01_add_0)
+                                                          0.00       9.56 f
+  ME266/CORE/sad_8/add_0_root_add_0_root_add_980/U1_9/CO (SVL_ADDF_1)
+                                                          0.15 &     9.71 f
+  ME266/CORE/sad_8/add_0_root_add_0_root_add_980/U1_10/CO (SVL_ADDF_1)
+                                                          0.14 &     9.85 f
+  ME266/CORE/sad_8/add_0_root_add_0_root_add_980/U1_11/CO (SVL_ADDF_1)
+                                                          0.14 &     9.99 f
+  ME266/CORE/sad_8/add_0_root_add_0_root_add_980/U1_12/CO (SVL_ADDF_P1_2)
+                                                          0.11 &    10.10 f
+  ME266/CORE/sad_8/add_0_root_add_0_root_add_980/U7/X (SVL_INV_S_6)
+                                                          0.03 &    10.13 r
+  ME266/CORE/sad_8/add_0_root_add_0_root_add_980/U2/X (SVL_ND2_4)
+                                                          0.03 &    10.16 f
+  ME266/CORE/sad_8/add_0_root_add_0_root_add_980/U5/X (SVL_ND2_6)
+                                                          0.02 &    10.19 r
+  ME266/CORE/sad_8/add_0_root_add_0_root_add_980/SUM[13] (sad_7_DW01_add_0)
+                                                          0.00      10.19 r
+  ME266/CORE/sad_8/sad_data_reg_13_/D (SVL_FDPRBQ_1)      0.00 &    10.19 r
+  data arrival time                                                 10.19
+
+  clock clk (rise edge)                                   5.08       5.08
+  clock network delay (propagated)                        5.22      10.30
+  clock reconvergence pessimism                           0.04      10.34
+  clock uncertainty                                      -0.10      10.24
+  ME266/CORE/sad_8/sad_data_reg_13_/CK (SVL_FDPRBQ_1)     0.00      10.24 r
+  library setup time                                     -0.04      10.19
+  data required time                                                10.19
+  --------------------------------------------------------------------------
+  data required time                                                10.19
+  data arrival time                                                -10.19
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

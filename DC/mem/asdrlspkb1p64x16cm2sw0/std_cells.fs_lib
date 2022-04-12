@@ -1,0 +1,119 @@
+//----------------------------------------------------------------------------
+// Copyright (c)        : 1998-2011 by Synopsys, Inc. All Rights Reserved.
+//----------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------
+// Cell model definitions.
+//----------------------------------------------------------------------------
+
+model VIRL_SDN_AN2_1 ( X, A1, A2 )
+(
+    input ( A1, A2 ) ()
+    output ( X )
+    (
+        primitive = _and U0 ( A1, A2, X ) ;
+    )
+)
+
+model VIRL_SDN_BUF_1 ( X, A )
+(
+    input ( A ) ()
+    output ( X )
+    (
+        primitive = _buf U0 ( A, X ) ;
+    )
+)
+
+
+model VIRL_SDN_EO2_4 ( X, A1, A2 )
+(
+    input ( A1, A2 ) ()
+    output ( X )
+    (
+        primitive = _xor U0 ( A1, A2, X ) ;
+    )
+)
+
+
+model VIRL_SDN_EO3_4 ( X, A1, A2, A3 )
+(
+    input ( A1, A2, A3 ) ()
+    output ( X )
+    (
+        primitive = _xor U0 ( A1, A2, A3, X ) ;
+    )
+)
+
+
+model VIRL_SDN_FSDP_1 ( Q, QN, CK, D, SI, SE )
+(
+    scan_definition
+    (
+        type = mux_scan ;
+        scan_out = Q ;
+        scan_in = SI ;
+        data_in = D ;
+        scan_enable = SE;
+    )
+    input ( D, SI, SE ) ()
+    input ( CK ) ( clock = rise_edge ; )
+    intern ( _i1 ) ()
+    output ( Q, QN )
+    (
+        primitive = _mux U0 ( D, SI, SE, _i1 ) ;
+        primitive = _dff U1 ( , , CK, _i1, Q, QN ) ;
+    )
+)
+
+
+
+model VIRL_SDN_INV_0P5 ( X, A )
+(
+    input ( A ) ()
+    output ( X )
+    (
+        primitive = _inv U0 ( A, X ) ;
+    )
+)
+
+
+
+model VIRL_SDN_MUX2_1 ( X, D0, D1, S )
+(
+    input ( D0, D1, S ) ()
+    output ( X )
+    (
+        primitive = _mux U0 ( D0, D1, S, X ) ;
+    )
+)
+
+model VIRL_SDN_OR2_1 ( X, A1, A2 )
+(
+    input ( A1, A2 ) ()
+    output ( X )
+    (
+        primitive = _or U0 ( A1, A2, X ) ;
+    )
+)
+
+model VIRL_SDN_FSDPRB_1 ( Q, QN, CK, D, SI, SE, RD )
+(
+    scan_definition
+    (
+        type = mux_scan ;
+        scan_out = Q ;
+        scan_in = SI ;
+        data_in = D ;
+        scan_enable = SE;
+    )
+    input ( D, SI, SE ) ()
+    input ( CK ) ( clock = rise_edge ; )
+    input ( RD ) ( active = low ; )
+    intern ( _i1 ) ()
+    output ( Q, QN )
+    (
+        primitive = _mux U0 ( D, SI, SE, _i1 ) ;
+        primitive = _dff U1 ( , RD, CK, _i1, Q, QN ) ;
+    )
+)
+

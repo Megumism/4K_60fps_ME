@@ -1,3 +1,5 @@
+dc_shell | tee run.log
+
 #Library Setup
 set search_path "$search_path ../rtl/me266 ../scripts ../lib /home/student/Desktop/Workspace/55nm ../work ../mem/asdrlspkb1p64x16cm2sw0/tt1p2v25c"
 set target_library   "hu55npkldut_tt1p0v25c.db HL55LPGP3VDS_SL_A01_P2_TT1D8V1D2V25C.db asdrlspkb1p64x16cm2sw0_lib.db"
@@ -19,7 +21,7 @@ elaborate me266_chip
 uniquify
 
 reset_design
-create_clock -period 5 [get_ports clk]
+create_clock -period 5.08 [get_ports clk]
 set_clock_uncertainty 0.25 [get_clocks clk]     
 set_clock_transition 0.1 [get_clocks clk]
 set_clock_latency -source 4 [get_clocks clk]
@@ -31,6 +33,7 @@ set auto_wire_load_selection true
 set_driving_cell -lib_cell HPDWUW1416DGP -pin PAD [all_inputs]
 set_load [load_of HL55LPGP3VDS_SL_A01_TT1D8V1D2V25C/HPDWUW1416DGP/PAD] [all_outputs]
 set_max_transition 3.0 [current_design]
+set_max_fanout  32 [current_design]
 set_ideal_network {rst}
 set_ideal_network {clk}
 set_dont_touch [get_cells "HPDWUW1416DGP*"] true

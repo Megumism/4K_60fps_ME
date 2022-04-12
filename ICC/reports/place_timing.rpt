@@ -1,0 +1,292 @@
+Warning: Clock network timing may not be up-to-date since only 0.000000 percentage of clock nets are routed. (TIM-233)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : me266_chip
+Version: O-2018.06-SP1
+Date   : Thu Apr  7 23:19:44 2022
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: TT1P0V25C   Library: hu55npkldut_tt1p0v25c
+	Parasitic source    : LPE
+	Parasitic mode      : RealRVirtualC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 25/25/25
+
+Information: Percent of Arnoldi-based delays =  0.00%
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: ME266/PRE/data_out_reg_0_
+            (rising-edge recovery check against clock clk)
+  Path Group: INPUTS
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                    0.00000    0.00000
+  clock network delay (ideal)                                              6.00000    6.00000
+  input external delay                                                     2.50000    8.50000 r
+  rst (in)                                                       0.00000   0.04917    8.54917 r
+  rst (net)                                     1      1.42720             0.00000    8.54917 r
+  HPDWUW1416DGP_rst/PAD (HPDWUW1416DGP)                          0.00000   0.00000 *  8.54917 r
+  HPDWUW1416DGP_rst/C (HPDWUW1416DGP)                            0.07669   0.63331    9.18248 r
+  net_rst (net)                                39      0.21043             0.00000    9.18248 r
+  ME266/rst (me266)                                                        0.00000    9.18248 r
+  ME266/rst (net)                                      0.21043             0.00000    9.18248 r
+  ME266/PRE/rst_n (pre_frame_buffer)                                       0.00000    9.18248 r
+  ME266/PRE/rst_n (net)                                0.21043             0.00000    9.18248 r
+  ME266/PRE/U10/X (SVL_BUF_S_2)                                  0.99023   0.90716 * 10.08964 r
+  ME266/PRE/n74 (net)                          47      0.14035             0.00000   10.08964 r
+  ME266/PRE/data_out_reg_0_/RD (SVL_FDPRBQ_1)                    0.99023   0.08124 * 10.17088 r
+  data arrival time                                                                  10.17088
+
+  clock clk (rise edge)                                                    5.00000    5.00000
+  clock network delay (ideal)                                              6.00000   11.00000
+  clock uncertainty                                                       -0.25000   10.75000
+  ME266/PRE/data_out_reg_0_/CK (SVL_FDPRBQ_1)                              0.00000   10.75000 r
+  library recovery time                                                   -0.33172   10.41828
+  data required time                                                                 10.41828
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 10.41828
+  data arrival time                                                                  -10.17088
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                         0.24741
+
+
+  Startpoint: ME266/PRE/in_en_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ref_read (output port clocked by clk)
+  Path Group: OUTPUTS
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                    0.00000    0.00000
+  clock network delay (ideal)                                              6.00000    6.00000
+  ME266/PRE/in_en_reg/CK (SVL_FDPRBQ_F_4)                        0.10000   0.00000 #  6.00000 r
+  ME266/PRE/in_en_reg/Q (SVL_FDPRBQ_F_4)                         0.03765   0.15011    6.15011 r
+  ME266/PRE/in_en (net)                         2      0.00215             0.00000    6.15011 r
+  ME266/PRE/in_en (pre_frame_buffer)                                       0.00000    6.15011 r
+  ME266/ref_read (net)                                 0.00215             0.00000    6.15011 r
+  ME266/ref_read (me266)                                                   0.00000    6.15011 r
+  net_ref_read (net)                                   0.00215             0.00000    6.15011 r
+  U8/X (SVL_INV_1)                                               0.13567   0.08955 *  6.23967 f
+  n235 (net)                                    1      0.01680             0.00000    6.23967 f
+  U5/X (SVL_INV_S_24)                                            0.04077   0.04091 *  6.28057 r
+  n234 (net)                                    1      0.01347             0.00000    6.28057 r
+  U11/X (SVL_INV_16)                                             0.01860   0.01852 *  6.29909 f
+  n10 (net)                                     1      0.01788             0.00000    6.29909 f
+  U12/X (SVL_INV_S_24)                                           0.01619   0.01869 *  6.31778 r
+  n11 (net)                                     1      0.01396             0.00000    6.31778 r
+  HPDWUW1416DGP_ref_read/PAD (HPDWUW1416DGP)                     0.37032   1.87731 *  8.19509 r
+  ref_read (net)                                1      2.85440             0.00000    8.19509 r
+  ref_read (out)                                                 0.37032   0.00000 *  8.19509 r
+  data arrival time                                                                   8.19509
+
+  clock clk (rise edge)                                                    5.00000    5.00000
+  clock network delay (ideal)                                              6.00000   11.00000
+  clock uncertainty                                                       -0.25000   10.75000
+  output external delay                                                   -2.50000    8.25000
+  data required time                                                                  8.25000
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                  8.25000
+  data arrival time                                                                  -8.19509
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                         0.05491
+
+
+  Startpoint: ME266/CORE/sad_12/sad_data_reg_7_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ME266/CORE/sad_min_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                    0.00000    0.00000
+  clock network delay (ideal)                                              6.00000    6.00000
+  ME266/CORE/sad_12/sad_data_reg_7_/CK (SVL_FDPRBQ_1)            0.10000   0.00000 #  6.00000 r
+  ME266/CORE/sad_12/sad_data_reg_7_/Q (SVL_FDPRBQ_1)             1.02855   0.68747    6.68747 r
+  ME266/CORE/sad_12/sad_data[7] (net)           3      0.07206             0.00000    6.68747 r
+  ME266/CORE/sad_12/sad_data[7] (sad_3)                                    0.00000    6.68747 r
+  ME266/CORE/sad_data_12[7] (net)                      0.07206             0.00000    6.68747 r
+  ME266/CORE/ct/sad_data_12[7] (compare_tree)                              0.00000    6.68747 r
+  ME266/CORE/ct/sad_data_12[7] (net)                   0.07206             0.00000    6.68747 r
+  ME266/CORE/ct/U1103/X (SVL_OR2_12)                             0.06181   0.13890 *  6.82637 r
+  ME266/CORE/ct/n1155 (net)                     1      0.00365             0.00000    6.82637 r
+  ME266/CORE/ct/U1105/X (SVL_ND3_4)                              0.03996   0.03585 *  6.86222 f
+  ME266/CORE/ct/n129 (net)                      1      0.00286             0.00000    6.86222 f
+  ME266/CORE/ct/U481/X (SVL_OR3B_3)                              0.03517   0.03450 *  6.89672 r
+  ME266/CORE/ct/n126 (net)                      1      0.00367             0.00000    6.89672 r
+  ME266/CORE/ct/U480/X (SVL_ND3_4)                               0.04512   0.04121 *  6.93792 f
+  ME266/CORE/ct/n673 (net)                      1      0.00385             0.00000    6.93792 f
+  ME266/CORE/ct/U483/X (SVL_OAI221_4)                            0.12538   0.03412 *  6.97204 r
+  ME266/CORE/ct/n201 (net)                      1      0.00352             0.00000    6.97204 r
+  ME266/CORE/ct/U489/X (SVL_OAI221_4)                            0.17765   0.06408 *  7.03612 f
+  ME266/CORE/ct/n675 (net)                      1      0.00395             0.00000    7.03612 f
+  ME266/CORE/ct/U494/X (SVL_AOI32_4)                             0.11347   0.11340 *  7.14952 r
+  ME266/CORE/ct/n295 (net)                      1      0.00372             0.00000    7.14952 r
+  ME266/CORE/ct/U1088/X (SVL_AO2BB2_4)                           0.04201   0.03695 *  7.18647 f
+  ME266/CORE/ct/n677 (net)                      1      0.00256             0.00000    7.18647 f
+  ME266/CORE/ct/U43/X (SVL_INV_S_3)                              0.15141   0.09760 *  7.28408 r
+  ME266/CORE/ct/n116 (net)                     15      0.03071             0.00000    7.28408 r
+  ME266/CORE/ct/U68/X (SVL_MUX2_1)                               0.06469   0.13526 *  7.41934 f
+  ME266/CORE/ct/n827 (net)                      3      0.00507             0.00000    7.41934 f
+  ME266/CORE/ct/U287/X (SVL_AOI211_2)                            0.11701   0.11486 *  7.53420 r
+  ME266/CORE/ct/n130 (net)                      1      0.00232             0.00000    7.53420 r
+  ME266/CORE/ct/U46/X (SVL_NR3_2)                                0.03571   0.02761 *  7.56181 f
+  ME266/CORE/ct/n723 (net)                      1      0.00132             0.00000    7.56181 f
+  ME266/CORE/ct/U47/X (SVL_INV_1)                                0.03098   0.03155 *  7.59335 r
+  ME266/CORE/ct/n182 (net)                      1      0.00132             0.00000    7.59335 r
+  ME266/CORE/ct/U492/X (SVL_OR3B_1)                              0.04340   0.02895 *  7.62230 f
+  ME266/CORE/ct/n724 (net)                      1      0.00114             0.00000    7.62230 f
+  ME266/CORE/ct/U574/X (SVL_OA221_2)                             0.05164   0.08795 *  7.71026 f
+  ME266/CORE/ct/n725 (net)                      1      0.00325             0.00000    7.71026 f
+  ME266/CORE/ct/U405/X (SVL_AN3B_3)                              0.07560   0.06694 *  7.77720 r
+  ME266/CORE/ct/n378 (net)                      1      0.00499             0.00000    7.77720 r
+  ME266/CORE/ct/U536/X (SVL_NR3_6)                               0.03105   0.02945 *  7.80665 f
+  ME266/CORE/ct/n726 (net)                      1      0.00384             0.00000    7.80665 f
+  ME266/CORE/ct/U543/X (SVL_NR3_4)                               0.06855   0.06912 *  7.87577 r
+  ME266/CORE/ct/n206 (net)                      1      0.00249             0.00000    7.87577 r
+  ME266/CORE/ct/U442/X (SVL_AOI221_2)                            0.05509   0.02431 *  7.90008 f
+  ME266/CORE/ct/n727 (net)                      1      0.00121             0.00000    7.90008 f
+  ME266/CORE/ct/U465/X (SVL_AO221_2)                             0.06019   0.15697 *  8.05704 f
+  ME266/CORE/ct/n728 (net)                      1      0.00331             0.00000    8.05704 f
+  ME266/CORE/ct/U421/X (SVL_OR3B_3)                              0.03917   0.04103 *  8.09807 r
+  ME266/CORE/ct/n119 (net)                      1      0.00349             0.00000    8.09807 r
+  ME266/CORE/ct/U413/X (SVL_ND2_4)                               0.03626   0.02519 *  8.12326 f
+  ME266/CORE/ct/n736 (net)                      1      0.00361             0.00000    8.12326 f
+  ME266/CORE/ct/U470/X (SVL_AOI32_4)                             0.11546   0.08288 *  8.20614 r
+  ME266/CORE/ct/n265 (net)                      1      0.00781             0.00000    8.20614 r
+  ME266/CORE/ct/U1010/X (SVL_NR2_8)                              0.03897   0.03132 *  8.23746 f
+  ME266/CORE/ct/n1082 (net)                     1      0.01222             0.00000    8.23746 f
+  ME266/CORE/ct/U754/X (SVL_NR2_16)                              0.10053   0.06232 *  8.29978 r
+  ME266/CORE/ct/n417 (net)                     14      0.03516             0.00000    8.29978 r
+  ME266/CORE/ct/U585/X (SVL_MUX2B_3)                             0.09189   0.19396 *  8.49374 f
+  ME266/CORE/ct/n900 (net)                      2      0.02059             0.00000    8.49374 f
+  ME266/CORE/ct/U500/X (SVL_INV_S_1)                             0.05800   0.06167 *  8.55541 r
+  ME266/CORE/ct/n180 (net)                      1      0.00254             0.00000    8.55541 r
+  ME266/CORE/ct/U525/X (SVL_INV_AS_3)                            0.02287   0.02193 *  8.57734 f
+  ME266/CORE/ct/n181 (net)                      2      0.00170             0.00000    8.57734 f
+  ME266/CORE/ct/U1339/X (SVL_AN2_2)                              0.04075   0.07293 *  8.65027 f
+  ME266/CORE/ct/n1374 (net)                     1      0.00347             0.00000    8.65027 f
+  ME266/CORE/ct/U1315/X (SVL_NR2_4)                              0.03637   0.03536 *  8.68563 r
+  ME266/CORE/ct/n1345 (net)                     1      0.00194             0.00000    8.68563 r
+  ME266/CORE/ct/U1316/X (SVL_INV_2)                              0.02246   0.02286 *  8.70849 f
+  ME266/CORE/ct/n1346 (net)                     1      0.00373             0.00000    8.70849 f
+  ME266/CORE/ct/U1312/X (SVL_NR2_4)                              0.07141   0.05743 *  8.76593 r
+  ME266/CORE/ct/n248 (net)                      1      0.00720             0.00000    8.76593 r
+  ME266/CORE/ct/U1206/X (SVL_NR2_8)                              0.02215   0.01806 *  8.78399 f
+  ME266/CORE/ct/n1262 (net)                     1      0.00343             0.00000    8.78399 f
+  ME266/CORE/ct/U1204/X (SVL_NR2_4)                              0.04732   0.03730 *  8.82129 r
+  ME266/CORE/ct/n73 (net)                       1      0.00381             0.00000    8.82129 r
+  ME266/CORE/ct/U107/X (SVL_AN3B_4)                              0.03290   0.02138 *  8.84266 f
+  ME266/CORE/ct/n835 (net)                      1      0.00329             0.00000    8.84266 f
+  ME266/CORE/ct/U1293/X (SVL_NR2_4)                              0.09447   0.06645 *  8.90911 r
+  ME266/CORE/ct/n419 (net)                      1      0.01049             0.00000    8.90911 r
+  ME266/CORE/ct/U1188/X (SVL_NR2_12)                             0.03120   0.02566 *  8.93477 f
+  ME266/CORE/ct/n1254 (net)                     1      0.01292             0.00000    8.93477 f
+  ME266/CORE/ct/U570/X (SVL_NR2_16)                              0.08797   0.06109 *  8.99587 r
+  ME266/CORE/ct/n739 (net)                     14      0.03633             0.00000    8.99587 r
+  ME266/CORE/ct/U716/X (SVL_MUX2B_4)                             0.09388   0.19989 *  9.19575 f
+  ME266/CORE/ct/n260 (net)                      3      0.02543             0.00000    9.19575 f
+  ME266/CORE/ct/U163/X (SVL_ND2_1)                               0.04348   0.05001 *  9.24576 r
+  ME266/CORE/ct/n916 (net)                      1      0.00096             0.00000    9.24576 r
+  ME266/CORE/ct/U162/X (SVL_ND2_1)                               0.06413   0.05150 *  9.29726 f
+  ME266/CORE/ct/n917 (net)                      1      0.00376             0.00000    9.29726 f
+  ME266/CORE/ct/U42/X (SVL_OAI222_4)                             0.14353   0.08438 *  9.38163 r
+  ME266/CORE/ct/n919 (net)                      1      0.00368             0.00000    9.38163 r
+  ME266/CORE/ct/U363/X (SVL_OR3B_4)                              0.05017   0.04232 *  9.42395 f
+  ME266/CORE/ct/n933 (net)                      1      0.00382             0.00000    9.42395 f
+  ME266/CORE/ct/U605/X (SVL_AOI31_4)                             0.06473   0.05585 *  9.47980 r
+  ME266/CORE/ct/n935 (net)                      1      0.00319             0.00000    9.47980 r
+  ME266/CORE/ct/U687/X (SVL_AN3B_3)                              0.03225   0.02571 *  9.50552 f
+  ME266/CORE/ct/n945 (net)                      1      0.00313             0.00000    9.50552 f
+  ME266/CORE/ct/U948/X (SVL_OAI221_4)                            0.11114   0.05976 *  9.56528 r
+  ME266/CORE/ct/n947 (net)                      1      0.00357             0.00000    9.56528 r
+  ME266/CORE/ct/U946/X (SVL_ND2_4)                               0.04243   0.03435 *  9.59963 f
+  ME266/CORE/ct/n949 (net)                      1      0.00378             0.00000    9.59963 f
+  ME266/CORE/ct/U968/X (SVL_OAOI211_4)                           0.11955   0.06736 *  9.66699 r
+  ME266/CORE/ct/n987 (net)                      1      0.00511             0.00000    9.66699 r
+  ME266/CORE/ct/motion_vec_x_cmp[3] (compare_tree)                         0.00000    9.66699 r
+  ME266/CORE/n2488 (net)                               0.00511             0.00000    9.66699 r
+  ME266/CORE/U587/X (SVL_BUF_24)                                 0.05025   0.08391 *  9.75090 r
+  ME266/CORE/n2489 (net)                       21      0.05950             0.00000    9.75090 r
+  ME266/CORE/ct/IN0 (compare_tree)                                         0.00000    9.75090 r
+  ME266/CORE/ct/IN0 (net)                              0.05950             0.00000    9.75090 r
+  ME266/CORE/ct/U1163/X (SVL_NR2B_4)                             0.02914   0.02996 *  9.78086 f
+  ME266/CORE/ct/n1211 (net)                     1      0.00516             0.00000    9.78086 f
+  ME266/CORE/ct/U1162/X (SVL_INV_S_6)                            0.02388   0.02445 *  9.80531 r
+  ME266/CORE/ct/n1347 (net)                     1      0.00675             0.00000    9.80531 r
+  ME266/CORE/ct/U1213/X (SVL_ND2_8)                              0.02699   0.02314 *  9.82845 f
+  ME266/CORE/ct/sad_cmp[1] (net)                3      0.00832             0.00000    9.82845 f
+  ME266/CORE/ct/sad_cmp[1] (compare_tree)                                  0.00000    9.82845 f
+  ME266/CORE/sad_cmp[1] (net)                          0.00832             0.00000    9.82845 f
+  ME266/CORE/U8/X (SVL_AN2_8)                                    0.03195   0.07193 *  9.90038 f
+  ME266/CORE/n2111 (net)                        1      0.00446             0.00000    9.90038 f
+  ME266/CORE/U528/X (SVL_INV_S_6)                                0.01998   0.02226 *  9.92264 r
+  ME266/CORE/n2134 (net)                        1      0.00448             0.00000    9.92264 r
+  ME266/CORE/U527/X (SVL_ND3_4)                                  0.04482   0.03545 *  9.95808 f
+  ME266/CORE/n11 (net)                          1      0.00378             0.00000    9.95808 f
+  ME266/CORE/U30/X (SVL_ND3_4)                                   0.03660   0.03206 *  9.99014 r
+  ME266/CORE/n95 (net)                          1      0.00367             0.00000    9.99014 r
+  ME266/CORE/U53/X (SVL_ND2_4)                                   0.02786   0.02698 * 10.01712 f
+  ME266/CORE/n2109 (net)                        1      0.00462             0.00000   10.01712 f
+  ME266/CORE/U4/X (SVL_INV_S_6)                                  0.01768   0.01965 * 10.03677 r
+  ME266/CORE/n97 (net)                          1      0.00366             0.00000   10.03677 r
+  ME266/CORE/U561/X (SVL_NR2_4)                                  0.01677   0.01425 * 10.05102 f
+  ME266/CORE/n26 (net)                          1      0.00368             0.00000   10.05102 f
+  ME266/CORE/U9/X (SVL_AOI221_4)                                 0.12283   0.07907 * 10.13009 r
+  ME266/CORE/n100 (net)                         1      0.00391             0.00000   10.13009 r
+  ME266/CORE/U532/X (SVL_NR2_4)                                  0.03776   0.02876 * 10.15884 f
+  ME266/CORE/n23 (net)                          1      0.00482             0.00000   10.15884 f
+  ME266/CORE/U539/X (SVL_NR2_6)                                  0.04122   0.03802 * 10.19686 r
+  ME266/CORE/n103 (net)                         1      0.00425             0.00000   10.19686 r
+  ME266/CORE/U542/X (SVL_NR2_4)                                  0.01825   0.01820 * 10.21506 f
+  ME266/CORE/n61 (net)                          1      0.00315             0.00000   10.21506 f
+  ME266/CORE/U47/X (SVL_AOI221_4)                                0.12075   0.07811 * 10.29317 r
+  ME266/CORE/n106 (net)                         1      0.00369             0.00000   10.29317 r
+  ME266/CORE/U44/X (SVL_INV_4)                                   0.03666   0.02769 * 10.32086 f
+  ME266/CORE/n20 (net)                          1      0.00506             0.00000   10.32086 f
+  ME266/CORE/U546/X (SVL_ND2_6)                                  0.03155   0.02972 * 10.35057 r
+  ME266/CORE/n110 (net)                         2      0.00698             0.00000   10.35057 r
+  ME266/CORE/U545/X (SVL_AOI32_4)                                0.09650   0.04208 * 10.39266 f
+  ME266/CORE/n2122 (net)                        1      0.00308             0.00000   10.39266 f
+  ME266/CORE/U50/X (SVL_AO2BB2_4)                                0.08207   0.07757 * 10.47023 r
+  ME266/CORE/n2490 (net)                        2      0.00533             0.00000   10.47023 r
+  ME266/CORE/U52/X (SVL_INV_4)                                   0.03837   0.03467 * 10.50490 f
+  ME266/CORE/n118 (net)                         3      0.01055             0.00000   10.50490 f
+  ME266/CORE/U537/X (SVL_ND2_6)                                  0.07110   0.03109 * 10.53599 r
+  ME266/CORE/n2131 (net)                        1      0.00741             0.00000   10.53599 r
+  ME266/CORE/U536/X (SVL_ND2_8)                                  0.04909   0.03572 * 10.57170 f
+  ME266/CORE/n2132 (net)                        5      0.01005             0.00000   10.57170 f
+  ME266/CORE/U124/X (SVL_AO221_1)                                0.05302   0.17051 * 10.74222 f
+  ME266/CORE/n49 (net)                          1      0.00149             0.00000   10.74222 f
+  ME266/CORE/sad_min_reg_4_/D (SVL_FDPSBQ_1)                     0.05302   0.00003 * 10.74224 f
+  data arrival time                                                                  10.74224
+
+  clock clk (rise edge)                                                    5.00000    5.00000
+  clock network delay (ideal)                                              6.00000   11.00000
+  clock uncertainty                                                       -0.25000   10.75000
+  ME266/CORE/sad_min_reg_4_/CK (SVL_FDPSBQ_1)                              0.00000   10.75000 r
+  library setup time                                                      -0.04155   10.70845
+  data required time                                                                 10.70845
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                 10.70845
+  data arrival time                                                                  -10.74224
+  ----------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                   -0.03380
+
+
+1

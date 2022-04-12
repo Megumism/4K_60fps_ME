@@ -1,0 +1,593 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : me266_chip
+Version: O-2018.06-SP1
+Date   : Fri Apr  8 11:51:01 2022
+****************************************
+
+	Parasitic source    : LPE
+	Parasitic mode      : RealRVirtualC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 25/25/25
+
+   max_delay/setup ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   ME266/CORE/sad_5/sad_data_reg_13_/D
+                               10.23          10.29 r        -0.05  (VIOLATED)
+   ME266/CORE/sad_5/sad_data_reg_12_/D
+                               10.24          10.28 r        -0.03  (VIOLATED)
+   ME266/CORE/sad_6/sad_data_reg_13_/D
+                               10.25          10.28 r        -0.03  (VIOLATED)
+   ME266/CORE/sad_1/sad_data_reg_13_/D
+                               10.27          10.30 r        -0.03  (VIOLATED)
+   ME266/CORE/sad_7/sad_data_reg_13_/D
+                               10.22          10.22 r         0.00  (VIOLATED: increase significant digits)
+
+
+   min_delay/hold ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   ME266/CUR/dua/DA[23]         5.88           5.70 f        -0.18  (VIOLATED)
+   ME266/CUR/dua/DA[11]         5.87           5.69 f        -0.18  (VIOLATED)
+   ME266/CUR/dua/DA[10]         5.87           5.71 f        -0.16  (VIOLATED)
+   ME266/CUR/dua/DA[12]         5.87           5.71 f        -0.16  (VIOLATED)
+   ME266/CUR/dua/DA[16]         5.88           5.72 f        -0.16  (VIOLATED)
+   ME266/CUR/dua/DA[17]         5.88           5.72 f        -0.16  (VIOLATED)
+   ME266/CUR/dua/DA[18]         5.88           5.72 f        -0.16  (VIOLATED)
+   ME266/CUR/dua/DA[14]         5.88           5.72 f        -0.15  (VIOLATED)
+   ME266/CUR/dua/DA[19]         5.88           5.73 f        -0.15  (VIOLATED)
+   ME266/CUR/dua/DA[13]         5.88           5.73 f        -0.15  (VIOLATED)
+   ME266/CUR/dua/DA[21]         5.88           5.73 f        -0.15  (VIOLATED)
+   ME266/CUR/dua/DA[45]         5.88           5.74 f        -0.14  (VIOLATED)
+   ME266/CUR/dua/DA[15]         5.88           5.73 f        -0.14  (VIOLATED)
+   ME266/CUR/dua/DA[53]         5.88           5.74 f        -0.14  (VIOLATED)
+   ME266/CUR/dua/DA[61]         5.86           5.72 f        -0.14  (VIOLATED)
+   ME266/CUR/dua/DA[59]         5.86           5.72 f        -0.14  (VIOLATED)
+   ME266/CUR/dua/DA[57]         5.86           5.72 f        -0.13  (VIOLATED)
+   ME266/CUR/dua/DA[41]         5.86           5.72 f        -0.13  (VIOLATED)
+   ME266/CUR/dua/DA[43]         5.87           5.75 f        -0.13  (VIOLATED)
+   ME266/CUR/dua/DA[62]         5.85           5.73 f        -0.12  (VIOLATED)
+   ME266/CUR/dua/DA[36]         5.85           5.73 f        -0.12  (VIOLATED)
+   ME266/CUR/dua/DA[39]         5.88           5.76 f        -0.11  (VIOLATED)
+   ME266/CUR/dua/DA[52]         5.88           5.77 f        -0.10  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/pre_pixel_cal_reg_6_/D
+                                5.69           5.59 f        -0.10  (VIOLATED)
+   ME266/CUR/dua/DA[32]         5.85           5.75 f        -0.10  (VIOLATED)
+   ME266/CUR/dua/DA[40]         5.87           5.78 f        -0.10  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/pre_pixel_cal_reg_5_/D
+                                5.69           5.59 f        -0.10  (VIOLATED)
+   ME266/CUR/dua/DA[44]         5.88           5.78 r        -0.10  (VIOLATED)
+   ME266/CUR/dua/DA[56]         5.88           5.78 f        -0.09  (VIOLATED)
+   ME266/CUR/dua/DA[48]         5.88           5.79 f        -0.09  (VIOLATED)
+   ME266/CORE/sad_8/pe_16/pre_pixel_cal_reg_3_/D
+                                5.64           5.55 f        -0.09  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/pre_pixel_cal_reg_3_/D
+                                5.69           5.60 f        -0.09  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/pre_pixel_cal_reg_4_/D
+                                5.68           5.59 f        -0.09  (VIOLATED)
+   ME266/CORE/sad_15/pe_33/pre_pixel_cal_reg_4_/D
+                                5.64           5.56 f        -0.09  (VIOLATED)
+   ME266/CUR/dua/DA[58]         5.87           5.78 f        -0.08  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/pre_pixel_cal_reg_2_/D
+                                5.68           5.59 f        -0.08  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/pre_pixel_cal_reg_3_/D
+                                5.68           5.59 f        -0.08  (VIOLATED)
+   ME266/CUR/dua/DA[37]         5.84           5.76 f        -0.08  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/pre_pixel_cal_reg_0_/D
+                                5.68           5.60 f        -0.08  (VIOLATED)
+   ME266/CORE/sad_15/pe_33/pre_pixel_cal_reg_7_/D
+                                5.64           5.57 f        -0.07  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/pre_pixel_cal_reg_5_/D
+                                5.73           5.66 f        -0.07  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/pre_pixel_cal_reg_2_/D
+                                5.73           5.66 f        -0.07  (VIOLATED)
+   ME266/CUR/dua/DA[20]         5.88           5.81 f        -0.07  (VIOLATED)
+   ME266/CORE/sad_15/pe_33/pre_pixel_cal_reg_5_/D
+                                5.64           5.57 f        -0.07  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/pre_pixel_cal_reg_1_/D
+                                5.67           5.60 f        -0.07  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/pre_pixel_cal_reg_4_/D
+                                5.73           5.66 f        -0.07  (VIOLATED)
+   ME266/CUR/dua/DA[22]         5.88           5.81 f        -0.07  (VIOLATED)
+   ME266/CORE/sad_8/pe_16/pre_pixel_cal_reg_5_/D
+                                5.63           5.57 f        -0.07  (VIOLATED)
+   ME266/CORE/sad_6/pe_76/pre_pixel_cal_reg_0_/D
+                                5.70           5.63 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/pre_pixel_cal_reg_3_/D
+                                5.73           5.66 f        -0.06  (VIOLATED)
+   ME266/CUR/dua/DA[60]         5.84           5.77 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_10/pe_24/pre_pixel_cal_reg_0_/D
+                                5.68           5.62 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_8/pe_15/pre_pixel_cal_reg_2_/D
+                                5.71           5.65 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/pre_pixel_cal_reg_1_/D
+                                5.69           5.63 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_6/pe_76/pre_pixel_cal_reg_1_/D
+                                5.70           5.64 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/pre_pixel_cal_reg_6_/D
+                                5.68           5.62 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_8/pe_16/pre_pixel_cal_reg_4_/D
+                                5.63           5.57 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_15/pe_33/pre_pixel_cal_reg_6_/D
+                                5.64           5.58 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/pre_pixel_cal_reg_7_/D
+                                5.68           5.62 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/pre_pixel_cal_reg_5_/D
+                                5.68           5.62 f        -0.06  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/pre_pixel_cal_reg_0_/D
+                                5.73           5.67 f        -0.05  (VIOLATED)
+   ME266/CUR/dua/DA[55]         5.85           5.80 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_1/pe_61/pre_pixel_cal_reg_1_/D
+                                5.63           5.57 f        -0.05  (VIOLATED)
+   ME266/CUR/dua/DA[38]         5.84           5.78 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_8/pe_15/pre_pixel_cal_reg_1_/D
+                                5.71           5.65 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/crt_pixel_cal_reg_6_/D
+                                5.64           5.59 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_8/pe_15/pre_pixel_cal_reg_3_/D
+                                5.71           5.65 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/crt_pixel_cal_reg_5_/D
+                                5.64           5.59 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/crt_pixel_cal_reg_4_/D
+                                5.64           5.59 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_8/pe_16/pre_pixel_cal_reg_2_/D
+                                5.63           5.58 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_1/pe_61/pre_pixel_cal_reg_2_/D
+                                5.63           5.58 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/pre_pixel_cal_reg_1_/D
+                                5.61           5.56 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_10/pe_30/pre_pixel_cal_reg_2_/D
+                                5.68           5.63 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/crt_pixel_cal_reg_7_/D
+                                5.64           5.59 f        -0.05  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/crt_pixel_cal_reg_2_/D
+                                5.64           5.59 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/pre_pixel_cal_reg_7_/D
+                                5.69           5.65 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_10/pe_34/pre_pixel_cal_reg_3_/D
+                                5.68           5.64 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_8/pe_16/pre_pixel_cal_reg_1_/D
+                                5.65           5.60 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_10/pe_30/pre_pixel_cal_reg_3_/D
+                                5.68           5.63 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/crt_pixel_cal_reg_7_/D
+                                5.60           5.56 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_4/pe_16/pre_pixel_cal_reg_6_/D
+                                5.68           5.64 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_7/pe_55/pre_pixel_cal_reg_6_/D
+                                5.72           5.68 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/crt_pixel_cal_reg_3_/D
+                                5.60           5.56 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/pre_pixel_cal_reg_0_/D
+                                5.61           5.57 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_15/pe_33/crt_pixel_cal_reg_0_/D
+                                5.59           5.55 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/crt_pixel_cal_reg_0_/D
+                                5.63           5.59 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_10/pe_34/pre_pixel_cal_reg_1_/D
+                                5.68           5.64 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/pre_pixel_cal_reg_0_/D
+                                5.69           5.65 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/crt_pixel_cal_reg_1_/D
+                                5.63           5.59 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_4/pe_16/pre_pixel_cal_reg_4_/D
+                                5.68           5.64 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/crt_pixel_cal_reg_3_/D
+                                5.64           5.60 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_5/pe_64/pre_pixel_cal_reg_4_/D
+                                5.57           5.53 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_10/pe_34/pre_pixel_cal_reg_2_/D
+                                5.68           5.64 f        -0.04  (VIOLATED)
+   ME266/CUR/dua/DA[54]         5.84           5.81 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/pre_pixel_cal_reg_3_/D
+                                5.66           5.62 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_6/pe_44/pre_pixel_cal_reg_6_/D
+                                5.70           5.66 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/pre_pixel_cal_reg_4_/D
+                                5.64           5.60 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/crt_pixel_cal_reg_6_/D
+                                5.60           5.56 f        -0.04  (VIOLATED)
+   ME266/CORE/sad_10/pe_34/pre_pixel_cal_reg_4_/D
+                                5.68           5.65 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/crt_pixel_cal_reg_5_/D
+                                5.60           5.56 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/pre_pixel_cal_reg_4_/D
+                                5.66           5.63 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/crt_pixel_cal_reg_2_/D
+                                5.63           5.59 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_8/pe_74/pre_pixel_cal_reg_6_/D
+                                5.70           5.67 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_7/pe_26/pre_pixel_cal_reg_2_/D
+                                5.63           5.60 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_7/pe_55/pre_pixel_cal_reg_7_/D
+                                5.72           5.69 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_11/pe_30/crt_pixel_cal_reg_3_/D
+                                5.63           5.59 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/pre_pixel_cal_reg_5_/D
+                                5.66           5.63 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/crt_pixel_cal_reg_4_/D
+                                5.60           5.57 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_6/pe_44/pre_pixel_cal_reg_4_/D
+                                5.70           5.67 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_10/pe_34/pre_pixel_cal_reg_5_/D
+                                5.68           5.65 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_10/pe_40/pre_pixel_cal_reg_4_/D
+                                5.68           5.64 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/pre_pixel_cal_reg_6_/D
+                                5.66           5.63 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_10/pe_40/pre_pixel_cal_reg_5_/D
+                                5.68           5.64 f        -0.03  (VIOLATED)
+   ME266/CUR/dua/DA[63]         5.84           5.81 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_6/pe_44/pre_pixel_cal_reg_3_/D
+                                5.70           5.67 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_6/pe_44/pre_pixel_cal_reg_7_/D
+                                5.70           5.67 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_6/pe_44/pre_pixel_cal_reg_5_/D
+                                5.70           5.67 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_10/pe_40/pre_pixel_cal_reg_6_/D
+                                5.67           5.65 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_3/pe_15/pre_pixel_cal_reg_7_/D
+                                5.67           5.64 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_6/pe_44/pre_pixel_cal_reg_2_/D
+                                5.70           5.67 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_6/pe_76/crt_pixel_cal_reg_0_/D
+                                5.65           5.62 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_1/pe_40/pre_pixel_cal_reg_4_/D
+                                5.62           5.59 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_15/pe_33/crt_pixel_cal_reg_7_/D
+                                5.59           5.56 f        -0.03  (VIOLATED)
+   ME266/CORE/sad_15/pe_33/crt_pixel_cal_reg_6_/D
+                                5.59           5.56 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_6/pe_67/crt_pixel_cal_reg_7_/D
+                                5.62           5.60 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_8/pe_22/pre_pixel_cal_reg_0_/D
+                                5.60           5.58 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/crt_pixel_cal_reg_3_/D
+                                5.68           5.66 f        -0.02  (VIOLATED)
+   ME266/CUR/dua/DA[51]         5.84           5.82 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/pre_pixel_cal_reg_7_/D
+                                5.66           5.64 f        -0.02  (VIOLATED)
+   ME266/CUR/dua/ADRB[0]        5.80           5.77 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_8/pe_13/pre_pixel_cal_reg_1_/D
+                                5.67           5.65 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_6/pe_76/crt_pixel_cal_reg_1_/D
+                                5.65           5.63 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_5/pe_32/pre_pixel_cal_reg_2_/D
+                                5.64           5.61 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_8/pe_15/pre_pixel_cal_reg_7_/D
+                                5.67           5.65 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_15/pe_33/crt_pixel_cal_reg_5_/D
+                                5.59           5.56 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_15/pe_56/pre_pixel_cal_reg_4_/D
+                                5.65           5.63 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/crt_pixel_cal_reg_1_/D
+                                5.68           5.66 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_6/pe_44/pre_pixel_cal_reg_1_/D
+                                5.70           5.68 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_11/pe_40/crt_pixel_cal_reg_7_/D
+                                5.62           5.60 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_5/pe_32/pre_pixel_cal_reg_3_/D
+                                5.64           5.62 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_5/pe_32/pre_pixel_cal_reg_4_/D
+                                5.64           5.62 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_13/pe_35/pre_pixel_cal_reg_7_/D
+                                5.67           5.66 f        -0.02  (VIOLATED)
+   ME266/CUR/dua/DA[5]          5.82           5.80 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/crt_pixel_cal_reg_5_/D
+                                5.68           5.66 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_5/pe_74/crt_pixel_cal_reg_5_/D
+                                5.55           5.53 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_8/pe_41/pre_pixel_cal_reg_7_/D
+                                5.64           5.62 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_14/pe_55/pre_pixel_cal_reg_1_/D
+                                5.66           5.64 f        -0.02  (VIOLATED)
+   ME266/CORE/sad_10/pe_20/pre_pixel_cal_reg_0_/D
+                                5.68           5.66 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_1/pe_40/pre_pixel_cal_reg_6_/D
+                                5.62           5.60 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_8/pe_25/pre_pixel_cal_reg_5_/D
+                                5.66           5.65 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_14/pe_55/pre_pixel_cal_reg_0_/D
+                                5.66           5.64 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_11/pe_52/pre_pixel_cal_reg_4_/D
+                                5.67           5.65 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_1/pe_40/pre_pixel_cal_reg_7_/D
+                                5.62           5.60 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/crt_pixel_cal_reg_4_/D
+                                5.68           5.66 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_1/pe_40/pre_pixel_cal_reg_1_/D
+                                5.61           5.60 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_11/pe_11/pre_pixel_cal_reg_5_/D
+                                5.67           5.66 f        -0.01  (VIOLATED)
+   ME266/CUR/dua/DA[35]         5.88           5.86 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_12/pe_10/pre_pixel_cal_reg_1_/D
+                                5.73           5.72 f        -0.01  (VIOLATED)
+   ME266/CUR/dua/ADRB[2]        5.80           5.79 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_10/pe_20/pre_pixel_cal_reg_1_/D
+                                5.68           5.66 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_5/pe_20/pre_pixel_cal_reg_6_/D
+                                5.64           5.63 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_5/pe_50/pre_pixel_cal_reg_4_/D
+                                5.65           5.64 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_7/pe_44/pre_pixel_cal_reg_1_/D
+                                5.71           5.69 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_10/pe_45/pre_pixel_cal_reg_2_/D
+                                5.65           5.64 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/crt_pixel_cal_reg_2_/D
+                                5.68           5.67 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_10/pe_45/pre_pixel_cal_reg_1_/D
+                                5.65           5.64 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_5/pe_20/pre_pixel_cal_reg_5_/D
+                                5.64           5.63 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_8/pe_13/pre_pixel_cal_reg_0_/D
+                                5.67           5.66 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/crt_pixel_cal_reg_6_/D
+                                5.68           5.67 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_14/pe_55/pre_pixel_cal_reg_2_/D
+                                5.66           5.65 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_8/pe_41/pre_pixel_cal_reg_2_/D
+                                5.63           5.62 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_4/pe_26/pre_pixel_cal_reg_7_/D
+                                5.68           5.67 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_7/pe_65/crt_pixel_cal_reg_0_/D
+                                5.68           5.67 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_8/pe_41/pre_pixel_cal_reg_3_/D
+                                5.63           5.63 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_12/pe_10/pre_pixel_cal_reg_0_/D
+                                5.73           5.72 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_12/pe_10/pre_pixel_cal_reg_2_/D
+                                5.73           5.72 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_8/pe_41/pre_pixel_cal_reg_0_/D
+                                5.63           5.63 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_5/pe_20/pre_pixel_cal_reg_7_/D
+                                5.64           5.63 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_5/pe_20/pre_pixel_cal_reg_0_/D
+                                5.64           5.63 f        -0.01  (VIOLATED)
+   ME266/CUR/dua/ADRB[3]        5.80           5.79 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_11/pe_52/pre_pixel_cal_reg_6_/D
+                                5.67           5.66 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_8/pe_15/pre_pixel_cal_reg_6_/D
+                                5.67           5.66 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_6/pe_44/crt_pixel_cal_reg_6_/D
+                                5.66           5.65 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_4/pe_75/pre_pixel_cal_reg_1_/D
+                                5.64           5.64 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_1/pe_40/pre_pixel_cal_reg_5_/D
+                                5.62           5.61 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_6/pe_44/crt_pixel_cal_reg_7_/D
+                                5.66           5.65 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_10/pe_24/crt_pixel_cal_reg_1_/D
+                                5.63           5.62 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_14/pe_25/pre_pixel_cal_reg_6_/D
+                                5.65           5.65 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_8/pe_41/pre_pixel_cal_reg_5_/D
+                                5.63           5.63 f        -0.01  (VIOLATED)
+   ME266/CORE/sad_15/pe_41/crt_pixel_cal_reg_1_/D
+                                5.56           5.55 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_6/pe_44/crt_pixel_cal_reg_5_/D
+                                5.66           5.65 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_10/pe_45/pre_pixel_cal_reg_0_/D
+                                5.65           5.65 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_14/pe_36/pre_pixel_cal_reg_0_/D
+                                5.65           5.65 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_0/pe_70/pre_pixel_cal_reg_4_/D
+                                5.67           5.66 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_3/pe_31/pre_pixel_cal_reg_5_/D
+                                5.68           5.68 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_14/pe_36/pre_pixel_cal_reg_3_/D
+                                5.65           5.65 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_14/pe_36/pre_pixel_cal_reg_1_/D
+                                5.65           5.65 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_14/pe_36/pre_pixel_cal_reg_2_/D
+                                5.65           5.65 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_1/pe_61/crt_pixel_cal_reg_0_/D
+                                5.57           5.57 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_1/pe_40/pre_pixel_cal_reg_3_/D
+                                5.61           5.61 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CUR/dua/DA[49]         5.84           5.84 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_5/pe_32/pre_pixel_cal_reg_7_/D
+                                5.63           5.63 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_5/pe_32/pre_pixel_cal_reg_5_/D
+                                5.63           5.63 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_4/pe_75/pre_pixel_cal_reg_0_/D
+                                5.64           5.64 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_14/pe_25/pre_pixel_cal_reg_5_/D
+                                5.65           5.65 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_10/pe_35/pre_pixel_cal_reg_3_/D
+                                5.64           5.64 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_8/pe_74/pre_pixel_cal_reg_5_/D
+                                5.70           5.70 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_11/pe_11/pre_pixel_cal_reg_4_/D
+                                5.67           5.67 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_10/pe_34/pre_pixel_cal_reg_6_/D
+                                5.66           5.65 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CUR/dua/DA[33]         5.84           5.84 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_11/pe_77/pre_pixel_cal_reg_7_/D
+                                5.75           5.75 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_8/pe_26/crt_pixel_cal_reg_1_/D
+                                5.60           5.60 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_7/pe_55/crt_pixel_cal_reg_7_/D
+                                5.67           5.67 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_11/pe_52/pre_pixel_cal_reg_5_/D
+                                5.67           5.67 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_8/pe_30/pre_pixel_cal_reg_6_/D
+                                5.63           5.63 f         0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/sad_10/pe_30/crt_pixel_cal_reg_1_/D
+                                5.63           5.63 f         0.00  (VIOLATED: increase significant digits)
+
+
+   max_transition
+
+                             Required        Actual
+   Net                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   ME266/CORE/n2524             2.15           2.22          -0.07  (VIOLATED)
+       PIN :   ME266/CORE/U178/X
+                                2.15           2.22          -0.07  (VIOLATED)
+   ME266/PRE/N441               2.18           2.21          -0.03  (VIOLATED)
+       PIN :   ME266/PRE/U242/X
+                                2.18           2.21          -0.03  (VIOLATED)
+   ME266/CORE/n2513             2.18           2.19          -0.02  (VIOLATED)
+       PIN :   ME266/CORE/U167/X
+                                2.18           2.19          -0.02  (VIOLATED)
+   ME266/CORE/n2532             2.15           2.16           0.00  (VIOLATED: increase significant digits)
+
+   -----------------------------------------------------------------
+   Total                      4                  -0.12  
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   ME266/CORE/n2524             0.30           0.32          -0.01  (VIOLATED)
+   n1096                        0.15           0.15          -0.01  (VIOLATED)
+   ME266/PRE/N441               0.07           0.08           0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/n2532             0.30           0.31           0.00  (VIOLATED: increase significant digits)
+   ME266/PRE/N444               0.07           0.07           0.00  (VIOLATED: increase significant digits)
+   n1079                        0.15           0.15           0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/n2482             0.30           0.31           0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/n2508             0.30           0.31           0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/n2513             0.15           0.15           0.00  (VIOLATED: increase significant digits)
+   n1099                        0.15           0.15           0.00  (VIOLATED: increase significant digits)
+   n1101                        0.15           0.15           0.00  (VIOLATED: increase significant digits)
+   n1040                        0.15           0.15           0.00  (VIOLATED: increase significant digits)
+   n1105                        0.15           0.15           0.00  (VIOLATED: increase significant digits)
+   n1109                        0.15           0.15           0.00  (VIOLATED: increase significant digits)
+   ME266/CORE/n2878             0.15           0.15           0.00  (VIOLATED: increase significant digits)
+   n1048                        0.15           0.15           0.00  (VIOLATED: increase significant digits)
+   n1052                        0.15           0.15           0.00  (VIOLATED: increase significant digits)
+
+   -----------------------------------------------------------------
+   Total                      17                 -0.04  
+
+   min_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   clk (dont_touch)             6.43           1.43          -5.00  (VIOLATED)
+   cur_in[0]                    6.43           1.43          -5.00  (VIOLATED)
+   cur_in[1]                    6.43           1.43          -5.00  (VIOLATED)
+   cur_in[2]                    6.43           1.43          -5.00  (VIOLATED)
+   cur_in[3]                    6.43           1.43          -5.00  (VIOLATED)
+   cur_in[4]                    6.43           1.43          -5.00  (VIOLATED)
+   cur_in[5]                    6.43           1.43          -5.00  (VIOLATED)
+   cur_in[6]                    6.43           1.43          -5.00  (VIOLATED)
+   cur_in[7]                    6.43           1.43          -5.00  (VIOLATED)
+   cur_in[8]                    6.43           1.43          -5.00  (VIOLATED)
+   cur_in[9]                    6.43           1.43          -5.00  (VIOLATED)
+   cur_in[10]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[11]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[12]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[13]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[14]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[15]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[16]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[17]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[18]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[19]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[20]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[21]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[22]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[23]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[24]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[25]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[26]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[27]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[28]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[29]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[30]                   6.43           1.43          -5.00  (VIOLATED)
+   cur_in[31]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[0]                    6.43           1.43          -5.00  (VIOLATED)
+   ref_in[1]                    6.43           1.43          -5.00  (VIOLATED)
+   ref_in[2]                    6.43           1.43          -5.00  (VIOLATED)
+   ref_in[3]                    6.43           1.43          -5.00  (VIOLATED)
+   ref_in[4]                    6.43           1.43          -5.00  (VIOLATED)
+   ref_in[5]                    6.43           1.43          -5.00  (VIOLATED)
+   ref_in[6]                    6.43           1.43          -5.00  (VIOLATED)
+   ref_in[7]                    6.43           1.43          -5.00  (VIOLATED)
+   ref_in[8]                    6.43           1.43          -5.00  (VIOLATED)
+   ref_in[9]                    6.43           1.43          -5.00  (VIOLATED)
+   ref_in[10]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[11]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[12]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[13]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[14]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[15]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[16]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[17]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[18]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[19]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[20]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[21]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[22]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[23]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[24]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[25]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[26]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[27]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[28]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[29]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[30]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[31]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[32]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[33]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[34]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[35]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[36]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[37]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[38]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[39]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[40]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[41]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[42]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[43]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[44]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[45]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[46]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[47]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[48]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[49]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[50]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[51]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[52]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[53]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[54]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[55]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[56]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[57]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[58]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[59]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[60]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[61]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[62]                   6.43           1.43          -5.00  (VIOLATED)
+   ref_in[63]                   6.43           1.43          -5.00  (VIOLATED)
+   rst                          6.43           1.43          -5.00  (VIOLATED)
+   cur_read                     6.43           2.85          -3.57  (VIOLATED)
+   ref_read                     6.43           2.85          -3.57  (VIOLATED)
+   sad_out                      6.43           2.85          -3.57  (VIOLATED)
+   sign_sad                     6.43           2.85          -3.57  (VIOLATED)
+   y_out                        6.43           2.85          -3.57  (VIOLATED)
+   x_out (dont_touch)           6.43           2.87          -3.55  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      104              -511.42  
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   me266_chip                   0.00       917459.69      -917459.69
+                                                                    (VIOLATED)
+
+
+1

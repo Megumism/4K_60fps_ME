@@ -11,6 +11,7 @@ report_constraint -all
 set_clock_tree_options -target_skew 0.3
 set_clock_uncertainty 0.2 [all_clocks]
 #source ndr.tcl
+#set_clock_tree_options -max_fanout 32
 report_clock_tree -settings
 check_physical_design -stage pre_clock_opt -display
 #set_delay_calculation -clock_arnoldi

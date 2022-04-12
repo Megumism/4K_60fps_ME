@@ -1,0 +1,31 @@
+# Parameters needed for scramble: 
+
+low_leakage = 1
+bist_enable = 0
+scramble_file = /home/synopsystools/Downloads/Huali_sram/hu55npkb1p11asdrl32ksa03p1/scramble.tcl
+#Scramble TCL file (part of the memory compiler). Is needed for Bit Browsing.
+
+NB = 16
+#Number of bits of the memory instance. Is needed for Bit Browsing.
+
+NW = 64
+#Number of words of the memory instance. Is needed for Bit Browsing.
+
+CM = 2
+#Column mux of the memory instance. Is needed for Bit Browsing.
+
+def_file = /home/synopsystools/Downloads/Huali_sram/hu55npkb1p11asdrl32ksa03p1/gdsview.cfg
+#Layers Definition and colors file. Could be from the memory compiler.
+
+gds_file = asdrlspkb1p64x16cm2sw0.gds
+#The GDSII file. Could be given an absolute path, or relative to the control file.
+
+BK = 1
+#Number of Banks of the memory instance. Is needed for Bit Browsing.
+
+bitcell_name = me84a03HL_55LP_SRAM_SP525_HVT_cell
+#Name of the of the memory Bit structure in the gds. Is needed for Bit Browsing. If the name is not given, Bit Browser trys to autodetect it.
+
+masis_file = /home/synopsystools/Embedit_Projects/test_lin/compout/views/asdrlspkb1p64x16cm2sw0/asdrlspkb1p64x16cm2sw0.masis
+#MASIS interface file. Is needed for Bit Browsing.
+

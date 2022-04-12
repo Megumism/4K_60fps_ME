@@ -1,0 +1,27 @@
+Template  1           _allpvt.ds
+Template  2         _allpvt.html
+Template  3                .summ
+Template  4                   .v
+Template  6                 .lib
+Template 10                 .alf
+Template 11              .fs_lib
+Template 12                 .tpf
+Template 13                 .max
+Template 14                 .spf
+Template 15               .lvlib
+Template 16             .membist
+Template 18             _rtl.vhd
+Template 19              _stim.v
+Template 20  _verilog_vhd_stim.v
+Template 21           _coord.txt
+Template 23            _mask.txt
+Template 25          _params.tcl
+Template 26      _atpg_netlist.v
+Template 27                     
+Template 28                     
+Template 32              .bitmap
+Template 33       _bus_wrapper.v
+Template 34                     
+Template 35                     
+Template 36         _fast_func.v
+Template 37               .masis

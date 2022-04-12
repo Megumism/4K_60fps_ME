@@ -1,12 +1,13 @@
 ###################################################################
 
-# Created by write_sdc on Tue Mar 29 19:07:15 2022
+# Created by write_sdc on Fri Apr  8 10:41:26 2022
 
 ###################################################################
 set sdc_version 2.1
 
 set_units -time ns -resistance kOhm -capacitance pF -voltage V -current mA
 set_wire_load_mode segmented
+set_max_fanout 32 [current_design]
 set_max_transition 3 [current_design]
 set_driving_cell -lib_cell HPDWUW1416DGP -pin PAD [get_ports clk]
 set_driving_cell -lib_cell HPDWUW1416DGP -pin PAD [get_ports rst]
@@ -111,9 +112,10 @@ set_load -pin_load 1.4272 [get_ports cur_read]
 set_load -pin_load 1.4272 [get_ports sad_out]
 set_load -pin_load 1.4272 [get_ports x_out]
 set_load -pin_load 1.4272 [get_ports y_out]
+set_load -pin_load 1.4272 [get_ports sign_sad]
 set_ideal_network [get_ports clk]
 set_ideal_network [get_ports rst]
-create_clock [get_ports clk]  -period 5  -waveform {0 2.5}
+create_clock [get_ports clk]  -period 5.08  -waveform {0 2.54}
 set_clock_latency 2  [get_clocks clk]
 set_clock_latency -source 4  [get_clocks clk]
 set_clock_uncertainty 0.25  [get_clocks clk]
@@ -223,3 +225,4 @@ set_output_delay -clock clk  -max 2.5  [get_ports cur_read]
 set_output_delay -clock clk  -max 2.5  [get_ports sad_out]
 set_output_delay -clock clk  -max 2.5  [get_ports x_out]
 set_output_delay -clock clk  -max 2.5  [get_ports y_out]
+set_output_delay -clock clk  -max 2.5  [get_ports sign_sad]
