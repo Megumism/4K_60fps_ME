@@ -11,10 +11,10 @@ output x_out;
 output y_out;
 output sign_sad;
 reg [13:0]buf_sad;
-reg signed [3:0]buf_x,buf_y;
+reg signed [4:0]buf_x,buf_y;
 reg sign_sad,sign_y,sign_x;
 reg [3:0]count_bf_sad;
-reg [1:0]count_bf_xy;
+reg [2:0]count_bf_xy;
 reg sad_reg,x_reg,y_reg;
 
 ////////////////////OUTPUT//////////////////////////
@@ -31,7 +31,7 @@ always @(posedge clk or negedge rst_n) begin//buf_y
     end
     else begin
         if(en) begin
-            buf_y <= iny-7;
+            buf_y <= iny-4'd7;
         end
         else begin
             buf_y <= buf_y;
@@ -58,7 +58,7 @@ always @(posedge clk or negedge rst_n) begin//buf_x
     end
     else begin
         if(en) begin
-            buf_x <= inx-7;
+            buf_x <= inx-4'd7;
         end
         else begin
             buf_x <= buf_x;
@@ -129,12 +129,13 @@ end
 
 always@(posedge clk or negedge rst_n) begin//count_bf_xy
     if(!rst_n) begin
-        count_bf_xy <= 2'd2;
+        count_bf_xy <= 3'd4;
     end 
     else begin
         if(sign_x) begin
-            if(count_bf_xy>0) count_bf_xy <= count_bf_xy - 1;
-            else count_bf_xy <= 2'd3;
+            if(count_bf_xy == 0) count_bf_xy <= 3'd4;
+            else if(count_bf_xy!=3'd1) count_bf_xy <= count_bf_xy - 1;
+            else count_bf_xy <= 3'd0;
         end
         else begin
             count_bf_xy <= count_bf_xy;
@@ -154,14 +155,14 @@ end
 always @(posedge clk or negedge rst_n) begin//sign_sad
     if(!rst_n) sign_x <= 0;
     else if(en) sign_x <= 1;
-    else if(count_bf_xy == 2'd3) sign_x <= 0;
+    else if(count_bf_xy == 3'd0) sign_x <= 0;
     else sign_x <= sign_x;
 end
 
 always @(posedge clk or negedge rst_n) begin//sign_sad
     if(!rst_n) sign_y <= 0;
     else if(en) sign_y <= 1;
-    else if(count_bf_xy == 2'd3) sign_y <= 0;
+    else if(count_bf_xy == 3'd0) sign_y <= 0;
     else sign_y <= sign_y;
 end
 
