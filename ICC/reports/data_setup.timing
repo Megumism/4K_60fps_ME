@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : me266_chip
 Version: O-2018.06-SP1
-Date   : Fri Apr  8 10:44:47 2022
+Date   : Fri Apr  8 19:20:25 2022
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.

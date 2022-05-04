@@ -208,116 +208,116 @@ Warning: Cell 'HPDWUW1416DGP_ref_in50' is being marked as "dont_touch" because i
 Warning: Cell 'HPDWUW1416DGP_ref_in51' is being marked as "dont_touch" because it has 
 	a fixed_placement attribute. (PSYN-040)
   Loading design 'me266_chip'
-Warning: No Route constrains on dangling net, or net with constant driver 'n1001'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1002'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1003'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1004'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1005'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1006'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1007'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1008'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1009'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1010'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1011'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1012'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1013'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1014'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1015'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1016'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1017'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1018'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1019'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1020'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1021'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1022'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1023'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1024'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1025'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1026'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1027'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1028'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1029'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1030'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1031'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1032'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1033'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1034'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1035'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1036'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1037'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1038'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1039'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1040'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1041'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1042'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1043'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1044'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1045'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1046'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1047'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1048'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1049'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1050'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1051'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1052'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1053'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1054'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1055'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1056'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1057'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1058'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1059'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1060'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1061'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1062'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1063'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1064'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1065'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1066'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1067'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1068'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1069'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1070'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1071'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1072'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1073'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1074'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1075'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1076'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1077'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1078'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1079'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1080'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1081'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1082'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1083'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1084'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1085'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1086'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1087'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1088'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1089'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1090'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1091'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1092'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1093'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1094'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1095'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1096'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1097'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1098'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1099'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1100'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1101'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1102'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1103'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1104'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1105'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1106'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1107'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1108'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1109'. (MWDC-032)
-Warning: No Route constrains on dangling net, or net with constant driver 'n1110'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n789'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n790'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n791'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n792'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n793'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n794'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n795'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n796'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n797'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n798'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n799'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n800'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n801'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n802'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n803'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n804'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n805'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n806'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n807'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n808'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n809'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n810'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n811'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n812'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n813'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n814'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n815'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n816'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n817'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n818'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n819'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n820'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n821'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n822'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n823'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n824'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n825'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n826'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n827'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n828'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n829'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n830'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n831'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n832'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n833'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n834'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n835'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n836'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n837'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n838'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n839'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n840'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n841'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n842'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n843'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n844'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n845'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n846'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n847'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n848'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n849'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n850'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n851'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n852'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n853'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n854'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n855'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n856'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n857'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n858'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n859'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n860'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n861'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n862'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n863'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n864'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n865'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n866'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n867'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n868'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n869'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n870'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n871'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n872'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n873'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n874'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n875'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n876'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n877'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n878'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n879'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n880'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n881'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n882'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n883'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n884'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n885'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n886'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n887'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n888'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n889'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n890'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n891'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n892'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n893'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n894'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n895'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n896'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n897'. (MWDC-032)
+Warning: No Route constrains on dangling net, or net with constant driver 'n898'. (MWDC-032)
 
 
 Information: Setting a dont_touch attribute on net 'ref_in[7]' because it is connected to a pad cell. (PSYN-088)
@@ -444,7 +444,7 @@ Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-
 Information: The RC model used is detail route TLU+. (RCEX-015)
 Information: Start mixed mode parasitic extraction. (RCEX-023)
 Information: Start rc extraction...
-Memory usage for extraction task 687 Mbytes -- main task 2309 Mbytes.
+Memory usage for extraction task 691 Mbytes -- main task 1400 Mbytes.
 Warning: Net 'x_out' is not fully connected and will be estimated. (RCEX-060)
 Information: Parasitic source is LPE. (RCEX-040)
 Information: Parasitic mode is RealRC. (RCEX-041)
@@ -751,7 +751,7 @@ Information: Input delay ('rise') on clock port 'clk' will be added to the clock
 Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
 Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
 Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
-Warning: Extrapolations far outside the librarycharacterization range have been detected 6 times during delay calculation. (RCCALC-014)
+Warning: Extrapolations far outside the librarycharacterization range have been detected 12 times during delay calculation. (RCCALC-014)
  
 ****************************************
 Report : timing
@@ -760,7 +760,7 @@ Report : timing
         -max_paths 1
 Design : me266_chip
 Version: O-2018.06-SP1
-Date   : Fri Apr  8 14:36:43 2022
+Date   : Fri Apr  8 22:02:04 2022
 ****************************************
 
  * Some/all delay information is back-annotated.
@@ -771,12 +771,12 @@ Operating Conditions: TT1P0V25C   Library: hu55npkldut_tt1p0v25c
 	Extraction mode     : MIN_MAX
 	Extraction derating : 25/25/25
 
-Information: Percent of Arnoldi-based delays =  6.61%
+Information: Percent of Arnoldi-based delays =  6.54%
 
-Information: Percent of CCS-based delays =  6.45%
+Information: Percent of CCS-based delays =  6.38%
 
   Startpoint: rst (input port clocked by clk)
-  Endpoint: ME266/PRE/data_out_reg_101_
+  Endpoint: ME266/PRE/data_out_reg_178_
             (rising-edge recovery check against clock clk)
   Path Group: INPUTS
   Path Type: max
@@ -784,68 +784,66 @@ Information: Percent of CCS-based delays =  6.45%
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
-  clock network delay (ideal)                             5.58       5.58
-  input external delay                                    2.50       8.08 r
-  rst (in)                                                0.05       8.13 r
-  HPDWUW1416DGP_rst/PAD (HPDWUW1416DGP)                   0.00       8.13 r
-  HPDWUW1416DGP_rst/C (HPDWUW1416DGP)                     0.61 @     8.74 r
-  ME266/rst (me266)                                       0.00       8.74 r
-  ME266/U1/X (SVL_BUF_12)                                 0.15 c     8.89 r
-  ME266/PRE/IN2 (pre_frame_buffer)                        0.00       8.89 r
-  ME266/PRE/U12/X (SVL_BUF_S_1)                           0.71 c     9.60 r
-  ME266/PRE/data_out_reg_101_/RD (SVL_FDPRBQ_1)           0.01 &     9.61 r
-  data arrival time                                                  9.61
+  clock network delay (ideal)                             5.35       5.35
+  input external delay                                    2.50       7.85 r
+  rst (in)                                                0.05       7.90 r
+  HPDWUW1416DGP_rst/PAD (HPDWUW1416DGP)                   0.00       7.90 r
+  HPDWUW1416DGP_rst/C (HPDWUW1416DGP)                     0.61 @     8.50 r
+  ME266/rst (me266)                                       0.00       8.50 r
+  ME266/U1/X (SVL_BUF_S_2)                                0.74 c     9.25 r
+  ME266/PRE/IN4 (pre_frame_buffer)                        0.00       9.25 r
+  ME266/PRE/U54/X (SVL_BUF_S_1)                           0.99 c    10.24 r
+  ME266/PRE/data_out_reg_178_/RD (SVL_FDPRBQ_1)           0.08 c    10.32 r
+  data arrival time                                                 10.32
 
   clock clk (rise edge)                                   5.08       5.08
-  clock network delay (propagated)                        5.30      10.38
-  clock reconvergence pessimism                           0.00      10.38
-  clock uncertainty                                      -0.10      10.28
-  ME266/PRE/data_out_reg_101_/CK (SVL_FDPRBQ_1)           0.00      10.28 r
-  library recovery time                                  -0.36       9.91
-  data required time                                                 9.91
+  clock network delay (propagated)                        5.19      10.27
+  clock reconvergence pessimism                           0.00      10.27
+  clock uncertainty                                      -0.10      10.17
+  ME266/PRE/data_out_reg_178_/CK (SVL_FDPRBQ_1)           0.00      10.17 r
+  library recovery time                                  -0.63       9.54
+  data required time                                                 9.54
   --------------------------------------------------------------------------
-  data required time                                                 9.91
-  data arrival time                                                 -9.61
+  data required time                                                 9.54
+  data arrival time                                                -10.32
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.30
+  slack (VIOLATED)                                                  -0.79
 
 
-  Startpoint: ME266/RESULT/y_reg_reg
+  Startpoint: ME266/RESULT/sign_sad_reg
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out (output port clocked by clk)
+  Endpoint: sign_sad (output port clocked by clk)
   Path Group: OUTPUTS
   Path Type: max
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
-  clock network delay (propagated)                        5.58       5.58
-  ME266/RESULT/y_reg_reg/CK (SVL_FDPHRBQ_1)               0.00       5.58 r
-  ME266/RESULT/y_reg_reg/Q (SVL_FDPHRBQ_1)                0.19       5.77 r
-  ME266/RESULT/y_out (result)                             0.00       5.77 r
-  ME266/y_out (me266)                                     0.00       5.77 r
-  U119/X (SVL_BUF_12)                                     0.05 &     5.82 r
-  U1/X (SVL_BUF_24)                                       0.05 c     5.87 r
-  HPDWUW1416DGP_y_out/PAD (HPDWUW1416DGP)                 1.88 c     7.75 r
-  y_out (out)                                             0.00       7.75 r
-  data arrival time                                                  7.75
+  clock network delay (propagated)                        5.31       5.31
+  ME266/RESULT/sign_sad_reg/CK (SVL_FDPRBQ_1)             0.00       5.31 r
+  ME266/RESULT/sign_sad_reg/Q (SVL_FDPRBQ_1)              0.33       5.64 r
+  ME266/RESULT/sign_sad (result)                          0.00       5.64 r
+  ME266/sign_sad (me266)                                  0.00       5.64 r
+  HPDWUW1416DGP_sign_sad/PAD (HPDWUW1416DGP)              1.92 &     7.56 r
+  sign_sad (out)                                          0.00       7.56 r
+  data arrival time                                                  7.56
 
   clock clk (rise edge)                                   5.08       5.08
-  clock network delay (ideal)                             5.58      10.66
-  clock reconvergence pessimism                           0.00      10.66
-  clock uncertainty                                      -0.10      10.56
-  output external delay                                  -2.50       8.06
-  data required time                                                 8.06
+  clock network delay (ideal)                             5.35      10.43
+  clock reconvergence pessimism                           0.00      10.43
+  clock uncertainty                                      -0.10      10.33
+  output external delay                                  -2.50       7.83
+  data required time                                                 7.83
   --------------------------------------------------------------------------
-  data required time                                                 8.06
-  data arrival time                                                 -7.75
+  data required time                                                 7.83
+  data arrival time                                                 -7.56
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.31
+  slack (MET)                                                        0.26
 
 
-  Startpoint: ME266/CORE/sad_1/pe_72/crt_pixel_cal_reg_0_
+  Startpoint: ME266/CORE/sad_6/pe_44/crt_pixel_cal_reg_0_
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ME266/CORE/sad_1/sad_data_reg_13_
+  Endpoint: ME266/CORE/sad_6/sad_data_reg_13_
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -853,92 +851,106 @@ Information: Percent of CCS-based delays =  6.45%
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
-  clock network delay (propagated)                        5.50       5.50
-  ME266/CORE/sad_1/pe_72/crt_pixel_cal_reg_0_/CK (SVL_FDPHRBQ_1)
-                                                          0.00       5.50 r
-  ME266/CORE/sad_1/pe_72/crt_pixel_cal_reg_0_/Q (SVL_FDPHRBQ_1)
-                                                          0.22       5.72 f
-  ME266/CORE/sad_1/pe_72/U25/X (SVL_NR2B_0P5)             0.10 &     5.82 f
-  ME266/CORE/sad_1/pe_72/U26/X (SVL_AN2_0P5)              0.09 &     5.91 f
-  ME266/CORE/sad_1/pe_72/U27/X (SVL_OAI222_1)             0.09 &     6.00 r
-  ME266/CORE/sad_1/pe_72/U17/X (SVL_INV_1)                0.03 &     6.03 f
-  ME266/CORE/sad_1/pe_72/U28/X (SVL_AO221_1)              0.14 &     6.17 f
-  ME266/CORE/sad_1/pe_72/U29/X (SVL_OA221_1)              0.08 &     6.25 f
-  ME266/CORE/sad_1/pe_72/U30/X (SVL_AO221_1)              0.15 &     6.40 f
-  ME266/CORE/sad_1/pe_72/U31/X (SVL_OAI221_1)             0.05 &     6.45 r
-  ME266/CORE/sad_1/pe_72/U32/X (SVL_AO21B_1)              0.05 &     6.51 f
-  ME266/CORE/sad_1/pe_72/U33/X (SVL_AO21B_1)              0.04 &     6.55 r
-  ME266/CORE/sad_1/pe_72/U13/X (SVL_OAI21_1)              0.12 &     6.67 f
-  ME266/CORE/sad_1/pe_72/U1/X (SVL_INV_0P5)               0.25 &     6.92 r
-  ME266/CORE/sad_1/pe_72/U19/X (SVL_AO22_1)               0.19 &     7.10 r
-  ME266/CORE/sad_1/pe_72/ad[0] (pe_901)                   0.00       7.10 r
-  ME266/CORE/sad_1/U375/X (SVL_EO2_0P5)                   0.23 &     7.34 r
-  ME266/CORE/sad_1/U371/X (SVL_EO2_0P5)                   0.35 &     7.69 r
-  ME266/CORE/sad_1/U368/X (SVL_AN2_0P5)                   0.30 &     7.99 r
-  ME266/CORE/sad_1/U104/S (SVL_ADDF_1)                    0.18 &     8.16 f
-  ME266/CORE/sad_1/add_4_root_add_0_root_add_980/B_1_ (sad_14_DW01_add_30)
-                                                          0.00       8.16 f
-  ME266/CORE/sad_1/add_4_root_add_0_root_add_980/U1_1/CO (SVL_ADDF_1)
-                                                          0.15 &     8.31 f
-  ME266/CORE/sad_1/add_4_root_add_0_root_add_980/U1_2/S (SVL_ADDF_1)
-                                                          0.20 &     8.51 f
-  ME266/CORE/sad_1/add_4_root_add_0_root_add_980/SUM_2_ (sad_14_DW01_add_30)
-                                                          0.00       8.51 f
-  ME266/CORE/sad_1/add_2_root_add_0_root_add_980/B_2_ (sad_14_DW01_add_2)
-                                                          0.00       8.51 f
-  ME266/CORE/sad_1/add_2_root_add_0_root_add_980/U1_2/CO (SVL_ADDF_1)
-                                                          0.17 &     8.68 f
-  ME266/CORE/sad_1/add_2_root_add_0_root_add_980/U1_3/CO (SVL_ADDF_1)
-                                                          0.15 &     8.83 f
-  ME266/CORE/sad_1/add_2_root_add_0_root_add_980/U1_4/CO (SVL_ADDF_1)
-                                                          0.14 &     8.97 f
-  ME266/CORE/sad_1/add_2_root_add_0_root_add_980/U1_5/CO (SVL_ADDF_1)
-                                                          0.14 &     9.11 f
-  ME266/CORE/sad_1/add_2_root_add_0_root_add_980/U1_6/CO (SVL_ADDF_1)
-                                                          0.14 &     9.24 f
-  ME266/CORE/sad_1/add_2_root_add_0_root_add_980/U1_7/S (SVL_ADDF_1)
-                                                          0.19 &     9.43 f
-  ME266/CORE/sad_1/add_2_root_add_0_root_add_980/SUM_7_ (sad_14_DW01_add_2)
-                                                          0.00       9.43 f
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/A_7_ (sad_14_DW01_add_0)
-                                                          0.00       9.43 f
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/U1_7/CO (SVL_ADDF_1)
-                                                          0.16 &     9.59 f
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/U1_8/CO (SVL_ADDF_1)
-                                                          0.14 &     9.73 f
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/U1_9/CO (SVL_ADDF_1)
-                                                          0.14 &     9.87 f
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/U1_10/CO (SVL_ADDF_4)
-                                                          0.14 &    10.01 f
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/U6/X (SVL_ND2_1)
-                                                          0.04 &    10.05 r
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/U7/X (SVL_ND3_1)
-                                                          0.06 &    10.11 f
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/U1_12/CO (SVL_ADDF_P1_4)
-                                                          0.13 &    10.24 f
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/U12/X (SVL_INV_S_6)
-                                                          0.04 &    10.28 r
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/U8/X (SVL_ND2_8)
-                                                          0.03 &    10.31 f
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/U10/X (SVL_ND2_12)
-                                                          0.02 &    10.33 r
-  ME266/CORE/sad_1/add_0_root_add_0_root_add_980/SUM[13] (sad_14_DW01_add_0)
-                                                          0.00      10.33 r
-  ME266/CORE/sad_1/sad_data_reg_13_/D (SVL_FDPRBQ_1)      0.00 &    10.33 r
-  data arrival time                                                 10.33
+  clock network delay (propagated)                        5.34       5.34
+  ME266/CORE/sad_6/pe_44/crt_pixel_cal_reg_0_/CK (SVL_FDPHRBQ_1)
+                                                          0.00       5.34 r
+  ME266/CORE/sad_6/pe_44/crt_pixel_cal_reg_0_/Q (SVL_FDPHRBQ_1)
+                                                          0.22       5.55 r
+  ME266/CORE/sad_6/pe_44/U25/X (SVL_NR2B_0P5)             0.16 &     5.71 r
+  ME266/CORE/sad_6/pe_44/U26/X (SVL_AN2_0P5)              0.11 &     5.82 r
+  ME266/CORE/sad_6/pe_44/U27/X (SVL_OAI222_1)             0.08 &     5.90 f
+  ME266/CORE/sad_6/pe_44/U18/X (SVL_INV_1)                0.06 &     5.96 r
+  ME266/CORE/sad_6/pe_44/U28/X (SVL_AO221_1)              0.06 &     6.02 r
+  ME266/CORE/sad_6/pe_44/U29/X (SVL_OA221_1)              0.10 &     6.12 r
+  ME266/CORE/sad_6/pe_44/U30/X (SVL_AO221_1)              0.07 &     6.19 r
+  ME266/CORE/sad_6/pe_44/U31/X (SVL_OAI221_1)             0.05 &     6.24 f
+  ME266/CORE/sad_6/pe_44/U32/X (SVL_AO21B_1)              0.06 &     6.30 r
+  ME266/CORE/sad_6/pe_44/U33/X (SVL_AO21B_1)              0.04 &     6.35 f
+  ME266/CORE/sad_6/pe_44/U13/X (SVL_OAI21_0P5)            0.19 &     6.54 r
+  ME266/CORE/sad_6/pe_44/U1/X (SVL_INV_S_1)               0.24 &     6.77 f
+  ME266/CORE/sad_6/pe_44/U16/X (SVL_AO22_1)               0.23 &     7.00 f
+  ME266/CORE/sad_6/pe_44/ad[0] (pe_603)                   0.00       7.00 f
+  ME266/CORE/sad_6/add_39_root_add_0_root_add_980/A_0_ (sad_9_DW01_add_24)
+                                                          0.00       7.00 f
+  ME266/CORE/sad_6/add_39_root_add_0_root_add_980/U1/X (SVL_AN2_0P5)
+                                                          0.10 &     7.10 f
+  ME266/CORE/sad_6/add_39_root_add_0_root_add_980/U1_1/CO (SVL_ADDF_1)
+                                                          0.13 &     7.24 f
+  ME266/CORE/sad_6/add_39_root_add_0_root_add_980/U1_2/S (SVL_ADDF_1)
+                                                          0.21 &     7.45 r
+  ME266/CORE/sad_6/add_39_root_add_0_root_add_980/SUM_2_ (sad_9_DW01_add_24)
+                                                          0.00       7.45 r
+  ME266/CORE/sad_6/add_27_root_add_0_root_add_980/A_2_ (sad_9_DW01_add_22)
+                                                          0.00       7.45 r
+  ME266/CORE/sad_6/add_27_root_add_0_root_add_980/U1_2/S (SVL_ADDF_1)
+                                                          0.19 &     7.64 f
+  ME266/CORE/sad_6/add_27_root_add_0_root_add_980/SUM_2_ (sad_9_DW01_add_22)
+                                                          0.00       7.64 f
+  ME266/CORE/sad_6/add_20_root_add_0_root_add_980/A_2_ (sad_9_DW01_add_18)
+                                                          0.00       7.64 f
+  ME266/CORE/sad_6/add_20_root_add_0_root_add_980/U1_2/CO (SVL_ADDF_1)
+                                                          0.16 &     7.79 f
+  ME266/CORE/sad_6/add_20_root_add_0_root_add_980/U1_3/CO (SVL_ADDF_1)
+                                                          0.14 &     7.93 f
+  ME266/CORE/sad_6/add_20_root_add_0_root_add_980/U1_4/S (SVL_ADDF_1)
+                                                          0.26 &     8.19 r
+  ME266/CORE/sad_6/add_20_root_add_0_root_add_980/SUM_4_ (sad_9_DW01_add_18)
+                                                          0.00       8.19 r
+  ME266/CORE/sad_6/add_15_root_add_0_root_add_980/B_4_ (sad_9_DW01_add_17)
+                                                          0.00       8.19 r
+  ME266/CORE/sad_6/add_15_root_add_0_root_add_980/U1_4/S (SVL_ADDF_1)
+                                                          0.22 &     8.41 f
+  ME266/CORE/sad_6/add_15_root_add_0_root_add_980/SUM_4_ (sad_9_DW01_add_17)
+                                                          0.00       8.41 f
+  ME266/CORE/sad_6/U143/CO (SVL_ADDF_2)                   0.16 &     8.58 f
+  ME266/CORE/sad_6/U59/X (SVL_EO3_1)                      0.28 &     8.85 r
+  ME266/CORE/sad_6/add_1_root_add_0_root_add_980/B_5_ (sad_9_DW01_add_1)
+                                                          0.00       8.85 r
+  ME266/CORE/sad_6/add_1_root_add_0_root_add_980/U1_5/S (SVL_ADDF_1)
+                                                          0.21 &     9.07 f
+  ME266/CORE/sad_6/add_1_root_add_0_root_add_980/SUM[5] (sad_9_DW01_add_1)
+                                                          0.00       9.07 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/B[5] (sad_9_DW01_add_0)
+                                                          0.00       9.07 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U1_5/CO (SVL_ADDF_1)
+                                                          0.15 &     9.22 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U1_6/CO (SVL_ADDF_1)
+                                                          0.14 &     9.35 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U1_7/CO (SVL_ADDF_1)
+                                                          0.14 &     9.49 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U1_8/CO (SVL_ADDF_1)
+                                                          0.14 &     9.63 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U1_9/CO (SVL_ADDF_1)
+                                                          0.14 &     9.76 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U1_10/CO (SVL_ADDF_1)
+                                                          0.14 &     9.90 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U1_11/CO (SVL_ADDF_1)
+                                                          0.14 &    10.03 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U1_12/CO (SVL_ADDF_1)
+                                                          0.13 &    10.17 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U7/X (SVL_INV_1)
+                                                          0.04 &    10.20 r
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U2/X (SVL_ND2_1)
+                                                          0.03 &    10.24 f
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/U5/X (SVL_ND2_1)
+                                                          0.03 &    10.27 r
+  ME266/CORE/sad_6/add_0_root_add_0_root_add_980/SUM[13] (sad_9_DW01_add_0)
+                                                          0.00      10.27 r
+  ME266/CORE/sad_6/sad_data_reg_13_/D (SVL_FDPRBQ_1)      0.00 &    10.27 r
+  data arrival time                                                 10.27
 
   clock clk (rise edge)                                   5.08       5.08
-  clock network delay (propagated)                        5.27      10.35
-  clock reconvergence pessimism                           0.05      10.39
-  clock uncertainty                                      -0.10      10.29
-  ME266/CORE/sad_1/sad_data_reg_13_/CK (SVL_FDPRBQ_1)     0.00      10.29 r
-  library setup time                                     -0.05      10.25
-  data required time                                                10.25
+  clock network delay (propagated)                        5.12      10.20
+  clock reconvergence pessimism                           0.04      10.24
+  clock uncertainty                                      -0.10      10.14
+  ME266/CORE/sad_6/sad_data_reg_13_/CK (SVL_FDPRBQ_1)     0.00      10.14 r
+  library setup time                                     -0.05      10.09
+  data required time                                                10.09
   --------------------------------------------------------------------------
-  data required time                                                10.25
-  data arrival time                                                -10.33
+  data required time                                                10.09
+  data arrival time                                                -10.27
   --------------------------------------------------------------------------
-  slack (VIOLATED)                                                  -0.08
+  slack (VIOLATED)                                                  -0.18
 
 
 1

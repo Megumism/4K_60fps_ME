@@ -324,7 +324,7 @@ Information: Resistance Unit from Milkyway design library: 'kohm'
 Information: Design Library and main library resistance units are matched - 1.000 kohm. 
 Information: Capacitance Unit from Milkyway design library: 'pf' 
 Information: Design Library and main library capacitance units are matched - 1.000 pf. 
-116507/116610 nets are routed
+116530/116633 nets are routed
 Information: Found HALF_NODE_SCALE_FACTOR 0.900000 in TLUPlus files. (TLUP-016)
 Information: Using the HALF_NODE_SCALE_FACTOR in TLUPlus for process scale. (RCEX-086)
 Information: The process parameters are scaled by 0.9 0.9. (RCEX-050)
@@ -332,7 +332,7 @@ Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-
 Information: The RC model used is global route TLU+. (RCEX-015)
 Information: Start mixed mode parasitic extraction. (RCEX-023)
 Information: Start rc extraction...
-Memory usage for extraction task 606 Mbytes -- main task 1583 Mbytes.
+Memory usage for extraction task 603 Mbytes -- main task 1316 Mbytes.
 Warning: Net 'net_clk' is exceeding threshold (over 1000 pins) and will be skipped. (RCEX-020)
 Warning: Net 'x_out' is not fully connected and will be estimated. (RCEX-060)
 Information: Parasitic source is LPE. (RCEX-040)
@@ -635,7 +635,7 @@ Report : timing
         -max_paths 1
 Design : me266_chip
 Version: O-2018.06-SP1
-Date   : Fri Apr  8 11:33:29 2022
+Date   : Fri Apr  8 21:31:10 2022
 ****************************************
 
  * Some/all delay information is back-annotated.
@@ -643,16 +643,12 @@ Date   : Fri Apr  8 11:33:29 2022
  # A fanout number of 1000 was used for high fanout net computations.
 
 Operating Conditions: TT1P0V25C   Library: hu55npkldut_tt1p0v25c
-	Parasitic source    : LPE
-	Parasitic mode      : RealRVirtualC
-	Extraction mode     : MIN_MAX
-	Extraction derating : 25/25/25
 
 Information: Percent of Arnoldi-based delays =  0.00%
 
-  Startpoint: rst (input port clocked by clk)
-  Endpoint: ME266/PRE/data_out_reg_43_
-            (rising-edge recovery check against clock clk)
+  Startpoint: ref_in[49] (input port clocked by clk)
+  Endpoint: ME266/PRE/sram2
+            (rising edge-triggered flip-flop clocked by clk)
   Path Group: INPUTS
   Path Type: max
 
@@ -660,33 +656,33 @@ Information: Percent of Arnoldi-based delays =  0.00%
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             6.00       6.00
-  input external delay                                    2.50       8.50 r
-  rst (in)                                                0.05       8.55 r
-  HPDWUW1416DGP_rst/PAD (HPDWUW1416DGP)                   0.00 *     8.55 r
-  HPDWUW1416DGP_rst/C (HPDWUW1416DGP)                     0.61       9.16 r
-  ME266/rst (me266)                                       0.00       9.16 r
-  ME266/U1/X (SVL_BUF_16)                                 0.20 *     9.36 r
-  ME266/PRE/IN2 (pre_frame_buffer)                        0.00       9.36 r
-  ME266/PRE/U14/X (SVL_BUF_S_1)                           0.67 *    10.04 r
-  ME266/PRE/data_out_reg_43_/RD (SVL_FDPRBQ_2)            0.00 *    10.04 r
-  data arrival time                                                 10.04
+  input external delay                                    2.50       8.50 f
+  ref_in[49] (in)                                         0.06       8.56 f
+  HPDWUW1416DGP_ref_in49/PAD (HPDWUW1416DGP)              0.00 *     8.56 f
+  HPDWUW1416DGP_ref_in49/C (HPDWUW1416DGP)                0.75       9.30 f
+  ME266/ref_in[49] (me266)                                0.00       9.30 f
+  ME266/PRE/data_in[49] (pre_frame_buffer)                0.00       9.30 f
+  ME266/PRE/sram2/DA[49] (sadslspkb2p24x64m4b1w0cp0d0t0)
+                                                          0.31 *     9.61 f
+  data arrival time                                                  9.61
 
   clock clk (rise edge)                                   5.08       5.08
   clock network delay (ideal)                             6.00      11.08
   clock uncertainty                                      -0.25      10.83
-  ME266/PRE/data_out_reg_43_/CK (SVL_FDPRBQ_2)            0.00      10.83 r
-  library recovery time                                  -0.31      10.52
-  data required time                                                10.52
+  ME266/PRE/sram2/CLKA (sadslspkb2p24x64m4b1w0cp0d0t0)
+                                                          0.00      10.83 r
+  library setup time                                     -0.40      10.43
+  data required time                                                10.43
   --------------------------------------------------------------------------
-  data required time                                                10.52
-  data arrival time                                                -10.04
+  data required time                                                10.43
+  data arrival time                                                 -9.61
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.48
+  slack (MET)                                                        0.82
 
 
-  Startpoint: ME266/RESULT/y_reg_reg
+  Startpoint: ME266/RESULT/sign_sad_reg
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out (output port clocked by clk)
+  Endpoint: sign_sad (output port clocked by clk)
   Path Group: OUTPUTS
   Path Type: max
 
@@ -694,14 +690,12 @@ Information: Percent of Arnoldi-based delays =  0.00%
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             6.00       6.00
-  ME266/RESULT/y_reg_reg/CK (SVL_FDPHRBQ_1)               0.00 #     6.00 r
-  ME266/RESULT/y_reg_reg/Q (SVL_FDPHRBQ_1)                0.24       6.24 r
-  ME266/RESULT/y_out (result)                             0.00       6.24 r
-  ME266/y_out (me266)                                     0.00       6.24 r
-  U119/X (SVL_BUF_12)                                     0.08 *     6.32 r
-  U1/X (SVL_BUF_24)                                       0.05 *     6.37 r
-  HPDWUW1416DGP_y_out/PAD (HPDWUW1416DGP)                 1.88 *     8.25 r
-  y_out (out)                                             0.00 *     8.25 r
+  ME266/RESULT/sign_sad_reg/CK (SVL_FDPRBQ_1)             0.00 #     6.00 r
+  ME266/RESULT/sign_sad_reg/Q (SVL_FDPRBQ_1)              0.32       6.32 r
+  ME266/RESULT/sign_sad (result)                          0.00       6.32 r
+  ME266/sign_sad (me266)                                  0.00       6.32 r
+  HPDWUW1416DGP_sign_sad/PAD (HPDWUW1416DGP)              1.93 *     8.25 r
+  sign_sad (out)                                          0.00 *     8.25 r
   data arrival time                                                  8.25
 
   clock clk (rise edge)                                   5.08       5.08
@@ -716,9 +710,9 @@ Information: Percent of Arnoldi-based delays =  0.00%
   slack (MET)                                                        0.08
 
 
-  Startpoint: ME266/CORE/sad_8/sad_data_reg_8_
+  Startpoint: ME266/CORE/sad_10/pe_02/crt_pixel_cal_reg_0_
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ME266/CORE/sad_min_reg_4_
+  Endpoint: ME266/CORE/sad_10/sad_data_reg_11_
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -727,111 +721,77 @@ Information: Percent of Arnoldi-based delays =  0.00%
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             6.00       6.00
-  ME266/CORE/sad_8/sad_data_reg_8_/CK (SVL_FDPRBQ_1)      0.00 #     6.00 r
-  ME266/CORE/sad_8/sad_data_reg_8_/Q (SVL_FDPRBQ_1)       0.35       6.35 f
-  ME266/CORE/sad_8/sad_data[8] (sad_7)                    0.00       6.35 f
-  ME266/CORE/ct/sad_data_8[8] (compare_tree)              0.00       6.35 f
-  ME266/CORE/ct/U484/X (SVL_INV_0P5)                      0.34 *     6.69 r
-  ME266/CORE/ct/U391/X (SVL_NR2_2)                        0.03 *     6.72 f
-  ME266/CORE/ct/U390/X (SVL_OR3B_3)                       0.12 *     6.83 f
-  ME266/CORE/ct/U854/X (SVL_ND3_4)                        0.03 *     6.87 r
-  ME266/CORE/ct/U1325/X (SVL_ND3_4)                       0.04 *     6.91 f
-  ME266/CORE/ct/U1226/X (SVL_ND2_4)                       0.03 *     6.94 r
-  ME266/CORE/ct/U16/X (SVL_AOI32_4)                       0.04 *     6.99 f
-  ME266/CORE/ct/U46/X (SVL_AO2BB2_4)                      0.16 *     7.14 r
-  ME266/CORE/ct/U45/X (SVL_INV_S_6)                       0.14 *     7.29 f
-  ME266/CORE/ct/U1258/X (SVL_ND2_3)                       0.10 *     7.38 r
-  ME266/CORE/ct/U1388/X (SVL_ND2_12)                      0.04 *     7.43 f
-  ME266/CORE/ct/U1317/X (SVL_INV_16)                      0.04 *     7.47 r
-  ME266/CORE/ct/U138/X (SVL_NR2B_2)                       0.02 *     7.49 f
-  ME266/CORE/ct/U299/X (SVL_OR2_0P5)                      0.11 *     7.60 f
-  ME266/CORE/ct/U313/X (SVL_NR2_2)                        0.06 *     7.66 r
-  ME266/CORE/ct/U1179/X (SVL_INV_S_3)                     0.03 *     7.69 f
-  ME266/CORE/ct/U1067/X (SVL_ND2_4)                       0.03 *     7.72 r
-  ME266/CORE/ct/U1069/X (SVL_ND2_4)                       0.02 *     7.74 f
-  ME266/CORE/ct/U318/X (SVL_OR3B_3)                       0.03 *     7.77 r
-  ME266/CORE/ct/U485/X (SVL_OR3B_4)                       0.03 *     7.80 f
-  ME266/CORE/ct/U1103/X (SVL_ND2_4)                       0.03 *     7.84 r
-  ME266/CORE/ct/U1049/X (SVL_ND2_4)                       0.03 *     7.86 f
-  ME266/CORE/ct/U1133/X (SVL_ND2_4)                       0.02 *     7.88 r
-  ME266/CORE/ct/U1043/X (SVL_ND2_4)                       0.02 *     7.91 f
-  ME266/CORE/ct/U1040/X (SVL_INV_4)                       0.03 *     7.94 r
-  ME266/CORE/ct/U1042/X (SVL_NR2_8)                       0.02 *     7.95 f
-  ME266/CORE/ct/U153/X (SVL_NR2_8)                        0.03 *     7.99 r
-  ME266/CORE/ct/U946/X (SVL_AO2BB2_4)                     0.03 *     8.02 f
-  ME266/CORE/ct/U271/X (SVL_INV_4)                        0.13 *     8.15 r
-  ME266/CORE/ct/U4/X (SVL_MUXI2_2)                        0.06 *     8.21 f
-  ME266/CORE/ct/U1167/X (SVL_BUF_16)                      0.07 *     8.28 f
-  ME266/CORE/ct/U993/X (SVL_AO211_1)                      0.14 *     8.42 f
-  ME266/CORE/ct/U463/X (SVL_OAI221_2)                     0.04 *     8.46 r
-  ME266/CORE/ct/U1207/X (SVL_ND2_2)                       0.04 *     8.50 f
-  ME266/CORE/ct/U288/X (SVL_INV_2)                        0.04 *     8.53 r
-  ME266/CORE/ct/U104/X (SVL_NR2_4)                        0.02 *     8.55 f
-  ME266/CORE/ct/U1157/X (SVL_NR2_4)                       0.04 *     8.59 r
-  ME266/CORE/ct/U413/X (SVL_NR2_4)                        0.02 *     8.61 f
-  ME266/CORE/ct/U34/X (SVL_NR2_8)                         0.04 *     8.65 r
-  ME266/CORE/ct/U1048/X (SVL_NR2_4)                       0.02 *     8.67 f
-  ME266/CORE/ct/U1175/X (SVL_NR2_6)                       0.03 *     8.70 r
-  ME266/CORE/ct/U1174/X (SVL_INV_S_3)                     0.02 *     8.72 f
-  ME266/CORE/ct/U1137/X (SVL_ND2_4)                       0.02 *     8.74 r
-  ME266/CORE/ct/U1155/X (SVL_ND2_4)                       0.02 *     8.77 f
-  ME266/CORE/ct/U1028/X (SVL_INV_S_6)                     0.03 *     8.80 r
-  ME266/CORE/ct/U1154/X (SVL_NR2_8)                       0.02 *     8.81 f
-  ME266/CORE/ct/U1156/X (SVL_NR2_4)                       0.04 *     8.85 r
-  ME266/CORE/ct/U1368/X (SVL_NR2_6)                       0.03 *     8.88 f
-  ME266/CORE/ct/U1290/X (SVL_NR2_12)                      0.08 *     8.96 r
-  ME266/CORE/ct/U702/X (SVL_MUX2_S_2)                     0.11 *     9.07 f
-  ME266/CORE/ct/U582/X (SVL_INV_0P5)                      0.06 *     9.13 r
-  ME266/CORE/ct/U389/X (SVL_ND2_0P5)                      0.07 *     9.20 f
-  ME266/CORE/ct/U179/X (SVL_ND2_2)                        0.06 *     9.25 r
-  ME266/CORE/ct/U334/X (SVL_OAI222_4)                     0.07 *     9.32 f
-  ME266/CORE/ct/U1021/X (SVL_ND3_4)                       0.04 *     9.36 r
-  ME266/CORE/ct/U11/X (SVL_AOI31_4)                       0.04 *     9.41 f
-  ME266/CORE/ct/U133/X (SVL_AN3B_3)                       0.06 *     9.47 r
-  ME266/CORE/ct/U934/X (SVL_OAI221_4)                     0.06 *     9.52 f
-  ME266/CORE/ct/U23/X (SVL_ND2_4)                         0.04 *     9.56 r
-  ME266/CORE/ct/U958/X (SVL_OAOI211_4)                    0.04 *     9.60 f
-  ME266/CORE/ct/U1064/X (SVL_INV_6)                       0.04 *     9.64 r
-  ME266/CORE/ct/U1065/X (SVL_INV_AS_16)                   0.03 *     9.67 f
-  ME266/CORE/ct/U351/X (SVL_INV_0P5)                      0.07 *     9.75 r
-  ME266/CORE/ct/U1381/X (SVL_ND2_3)                       0.04 *     9.78 f
-  ME266/CORE/ct/U1383/X (SVL_ND2_4)                       0.03 *     9.81 r
-  ME266/CORE/ct/U1385/X (SVL_INV_S_3)                     0.02 *     9.83 f
-  ME266/CORE/ct/sad_cmp[2] (compare_tree)                 0.00       9.83 f
-  ME266/CORE/U15/X (SVL_INV_S_4)                          0.02 *     9.85 r
-  ME266/CORE/U32/X (SVL_ND2_0P5)                          0.04 *     9.89 f
-  ME266/CORE/U5/X (SVL_ND2_1)                             0.06 *     9.95 r
-  ME266/CORE/U31/X (SVL_INV_2)                            0.03 *     9.97 f
-  ME266/CORE/U30/X (SVL_ND2_4)                            0.03 *    10.00 r
-  ME266/CORE/U536/X (SVL_ND3_6)                           0.04 *    10.04 f
-  ME266/CORE/U615/X (SVL_ND3_6)                           0.04 *    10.08 r
-  ME266/CORE/U521/X (SVL_ND2_4)                           0.02 *    10.10 f
-  ME266/CORE/U47/X (SVL_INV_S_3)                          0.02 *    10.12 r
-  ME266/CORE/U522/X (SVL_NR3_3)                           0.02 *    10.14 f
-  ME266/CORE/U524/X (SVL_NR2_4)                           0.05 *    10.19 r
-  ME266/CORE/U20/X (SVL_NR2_4)                            0.02 *    10.21 f
-  ME266/CORE/U24/X (SVL_INV_S_4)                          0.02 *    10.23 r
-  ME266/CORE/U46/X (SVL_ND3_4)                            0.04 *    10.27 f
-  ME266/CORE/U529/X (SVL_ND2_4)                           0.03 *    10.30 r
-  ME266/CORE/U22/X (SVL_AOI32_4)                          0.04 *    10.34 f
-  ME266/CORE/U11/X (SVL_OAI22_4)                          0.07 *    10.40 r
-  ME266/CORE/U519/X (SVL_INV_2)                           0.03 *    10.43 f
-  ME266/CORE/U38/X (SVL_AO32_2)                           0.15 *    10.58 f
-  ME266/CORE/U117/X (SVL_AO221_1)                         0.19 *    10.77 f
-  ME266/CORE/sad_min_reg_4_/D (SVL_FDPSBQ_1)              0.00 *    10.77 f
-  data arrival time                                                 10.77
+  ME266/CORE/sad_10/pe_02/crt_pixel_cal_reg_0_/CK (SVL_FDPHRBQ_1)
+                                                          0.00 #     6.00 r
+  ME266/CORE/sad_10/pe_02/crt_pixel_cal_reg_0_/Q (SVL_FDPHRBQ_1)
+                                                          0.20       6.20 f
+  ME266/CORE/sad_10/pe_02/U25/X (SVL_NR2B_0P5)            0.10 *     6.29 f
+  ME266/CORE/sad_10/pe_02/U26/X (SVL_AN2_0P5)             0.08 *     6.38 f
+  ME266/CORE/sad_10/pe_02/U27/X (SVL_OAI222_1)            0.08 *     6.46 r
+  ME266/CORE/sad_10/pe_02/U17/X (SVL_INV_1)               0.03 *     6.49 f
+  ME266/CORE/sad_10/pe_02/U28/X (SVL_AO221_1)             0.14 *     6.63 f
+  ME266/CORE/sad_10/pe_02/U29/X (SVL_OA221_1)             0.08 *     6.71 f
+  ME266/CORE/sad_10/pe_02/U30/X (SVL_AO221_1)             0.14 *     6.84 f
+  ME266/CORE/sad_10/pe_02/U31/X (SVL_OAI221_1)            0.04 *     6.89 r
+  ME266/CORE/sad_10/pe_02/U32/X (SVL_AO21B_1)             0.05 *     6.94 f
+  ME266/CORE/sad_10/pe_02/U33/X (SVL_AO21B_1)             0.04 *     6.98 r
+  ME266/CORE/sad_10/pe_02/U13/X (SVL_OAI21_1)             0.10 *     7.08 f
+  ME266/CORE/sad_10/pe_02/U1/X (SVL_INV_0P5)              0.20 *     7.28 r
+  ME266/CORE/sad_10/pe_02/U7/X (SVL_AO22_1)               0.42 *     7.70 r
+  ME266/CORE/sad_10/pe_02/ad[1] (pe_381)                  0.00       7.70 r
+  ME266/CORE/sad_10/U222/S (SVL_ADDF_1)                   0.24 *     7.94 f
+  ME266/CORE/sad_10/U132/CO (SVL_ADDF_1)                  0.16 *     8.10 f
+  ME266/CORE/sad_10/U124/CO (SVL_ADDF_1)                  0.14 *     8.24 f
+  ME266/CORE/sad_10/U125/CO (SVL_ADDF_1)                  0.14 *     8.37 f
+  ME266/CORE/sad_10/U126/CO (SVL_ADDF_1)                  0.14 *     8.52 f
+  ME266/CORE/sad_10/U139/S (SVL_ADDF_1)                   0.22 *     8.73 r
+  ME266/CORE/sad_10/U84/S (SVL_ADDF_1)                    0.18 *     8.92 f
+  ME266/CORE/sad_10/U89/S (SVL_ADDF_1)                    0.23 *     9.14 r
+  ME266/CORE/sad_10/add_3_root_add_0_root_add_980/B_5_ (sad_5_DW01_add_5)
+                                                          0.00       9.14 r
+  ME266/CORE/sad_10/add_3_root_add_0_root_add_980/U1_5/S (SVL_ADDF_1)
+                                                          0.19 *     9.34 f
+  ME266/CORE/sad_10/add_3_root_add_0_root_add_980/SUM_5_ (sad_5_DW01_add_5)
+                                                          0.00       9.34 f
+  ME266/CORE/sad_10/add_1_root_add_0_root_add_980/A_5_ (sad_5_DW01_add_1)
+                                                          0.00       9.34 f
+  ME266/CORE/sad_10/add_1_root_add_0_root_add_980/U1_5/CO (SVL_ADDF_1)
+                                                          0.16 *     9.50 f
+  ME266/CORE/sad_10/add_1_root_add_0_root_add_980/U1_6/CO (SVL_ADDF_1)
+                                                          0.14 *     9.64 f
+  ME266/CORE/sad_10/add_1_root_add_0_root_add_980/U1_7/CO (SVL_ADDF_1)
+                                                          0.14 *     9.78 f
+  ME266/CORE/sad_10/add_1_root_add_0_root_add_980/U1_8/CO (SVL_ADDF_1)
+                                                          0.14 *     9.92 f
+  ME266/CORE/sad_10/add_1_root_add_0_root_add_980/U1_9/CO (SVL_ADDF_1)
+                                                          0.14 *    10.06 f
+  ME266/CORE/sad_10/add_1_root_add_0_root_add_980/U1_10/CO (SVL_ADDF_1)
+                                                          0.14 *    10.20 f
+  ME266/CORE/sad_10/add_1_root_add_0_root_add_980/U1_11/S (SVL_ADDF_1)
+                                                          0.17 *    10.37 f
+  ME266/CORE/sad_10/add_1_root_add_0_root_add_980/SUM[11] (sad_5_DW01_add_1)
+                                                          0.00      10.37 f
+  ME266/CORE/sad_10/add_0_root_add_0_root_add_980/B[11] (sad_5_DW01_add_0)
+                                                          0.00      10.37 f
+  ME266/CORE/sad_10/add_0_root_add_0_root_add_980/U1_11/S (SVL_ADDF_1)
+                                                          0.39 *    10.76 r
+  ME266/CORE/sad_10/add_0_root_add_0_root_add_980/SUM[11] (sad_5_DW01_add_0)
+                                                          0.00      10.76 r
+  ME266/CORE/sad_10/sad_data_reg_11_/D (SVL_FDPRBQ_1)     0.00 *    10.76 r
+  data arrival time                                                 10.76
 
   clock clk (rise edge)                                   5.08       5.08
   clock network delay (ideal)                             6.00      11.08
   clock uncertainty                                      -0.25      10.83
-  ME266/CORE/sad_min_reg_4_/CK (SVL_FDPSBQ_1)             0.00      10.83 r
-  library setup time                                     -0.04      10.79
-  data required time                                                10.79
+  ME266/CORE/sad_10/sad_data_reg_11_/CK (SVL_FDPRBQ_1)
+                                                          0.00      10.83 r
+  library setup time                                     -0.09      10.74
+  data required time                                                10.74
   --------------------------------------------------------------------------
-  data required time                                                10.79
-  data arrival time                                                -10.77
+  data required time                                                10.74
+  data arrival time                                                -10.76
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.01
+  slack (VIOLATED)                                                  -0.02
 
 
 1

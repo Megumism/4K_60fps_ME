@@ -334,7 +334,7 @@ Information: The distance unit in Capacitance and Resistance is 1 micron. (RCEX-
 Information: The RC model used is detail route TLU+. (RCEX-015)
 Information: Start mixed mode parasitic extraction. (RCEX-023)
 Information: Start rc extraction...
-Memory usage for extraction task 691 Mbytes -- main task 1396 Mbytes.
+Memory usage for extraction task 690 Mbytes -- main task 1953 Mbytes.
 Warning: Net 'x_out' is not fully connected and will be estimated. (RCEX-060)
 Information: Parasitic source is LPE. (RCEX-040)
 Information: Parasitic mode is RealRC. (RCEX-041)
@@ -647,19 +647,26 @@ Report : constraint
         -all_violators
 Design : me266_chip
 Version: O-2018.06-SP1
-Date   : Fri Apr  8 15:29:15 2022
+Date   : Fri Apr  8 22:22:19 2022
 ****************************************
 
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : 25/25/25
 
-   max_capacitance
+   max_fanout
 
                              Required        Actual
-   Net                      Capacitance    Capacitance       Slack
+   Net                        Fanout         Fanout          Slack
    -----------------------------------------------------------------
-   n1079                        0.15           0.15           0.00  (VIOLATED: increase significant digits)
+   ME266/net_clk_G2B4I66 (dont_touch)
+                               32.00          38.00          -6.00  (VIOLATED)
+   ME266/CUR/net_clk_G2B4I566 (dont_touch)
+                               32.00          33.00          -1.00  (VIOLATED)
 
    -----------------------------------------------------------------
-   Total                      1                  -0.00  
+   Total                      2                  -7.00  
 
    min_capacitance
 
@@ -779,7 +786,7 @@ Date   : Fri Apr  8 15:29:15 2022
                              Required        Actual
    Design                      Area           Area           Slack
    -----------------------------------------------------------------
-   me266_chip                   0.00       917808.00      -917808.00
+   me266_chip                   0.00       915210.75      -915210.75
                                                                     (VIOLATED)
 
 

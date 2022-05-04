@@ -2,6 +2,13 @@
 
 Motion Vector Estimation on 4K@60fps Video 运动向量估计硬件电路设计
 
+## 文件使用方法
+
+- doc：放置了小组成员的报告文档与PPT
+- _design：放置了原始的设计文件，包括rtl与tb
+- test：放置了全局的测试文件
+- DC/ICC：放置了虚拟机中产生的文件
+
 ## 1. 总架构
 
 1. 确定了电路的SADPC >= 10*
