@@ -1,4 +1,5 @@
 `timescale 1ns/1ps 
+
 module ME266_TB();
 
 integer cur,pre,sadt,xt,yt;
@@ -28,6 +29,7 @@ me266 ME266 (.clk(clk),
 
 initial//txt load
 begin 
+    
     clk=0;
     count=0;
 	  cur=$fopen("D:/desktop/ME_data_2022/inputs/4k/cur_3.txt","r");//load cur//记得改地址
@@ -35,19 +37,33 @@ begin
     sadt=$fopen("D:/desktop/sad.txt","w");//write sad	 
     xt=$fopen("D:/desktop/x.txt","w");//write x 
     yt=$fopen("D:/desktop/y.txt","w");//write y 
+    rst=1;
+    #15;
+    rst=0;
+    #15;
+    rst=1;
+    #10000;
+
+    rst=0;
+    $display("%b,%b",00000,00000) ;
+    $fwrite(sadt,"%d\n",14'd0);
+    $fclose(cur);$fclose(pre);$fclose(sadt);$fclose(xt);$fclose(yt);
+    #10000
+    rst=1;
+     $display("%b,%b",11111,11111) ;
+    count=0;
+	  cur=$fopen("D:/desktop/ME_data_2022/inputs/4k/cur_4.txt","r");//load cur//记得改地址
+	  pre=$fopen("D:/desktop/ME_data_2022/inputs/4k/ref_bi2.txt","r");//load ref	 
+    sadt=$fopen("D:/desktop/sad.txt","w");//write sad	 
+    xt=$fopen("D:/desktop/x.txt","w");//write x 
+    yt=$fopen("D:/desktop/y.txt","w");//write y 
+    #10000;
+    $display("%b,%b",00000,00000) ;
     
-	  
 end
 
-initial
-begin
-  rst=1;
-  #15;
-  rst=0;
-  #15;
-  rst=1;
-end
-always #5 clk=~clk;
+
+always #2.5 clk=~clk;
 always@(negedge clk)//ref_in
 begin
   if(ref_read==1)$fscanf(pre,"%b" ,ref_in) ;
